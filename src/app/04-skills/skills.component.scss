@@ -1,0 +1,64 @@
+
+$darker-blue:darken( #3a73bf, 20%);
+$white : #ffffff;
+$border-grey: #dddddd;
+
+
+.treemap {
+  position:relative;
+  border : solid 1px $border-grey;
+  height:400px;
+  width:100%;
+  margin-bottom : 20px;
+
+  /deep/ .node {
+    position: absolute !important;
+    font-size: 80% !important;
+    line-height: 150%;
+    overflow: hidden;
+    text-indent: 1%;
+    transition: background 1s;
+    transition: color 0.5s;
+    text-align: center !important;
+    &:hover {
+      background: grey !important;
+      color: white;
+    }
+  }
+
+}
+
+.controls {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.skillviewer {
+  width:100%;
+  background-color: $white;
+  border : solid 1px $border-grey;
+  padding : 20px;
+  margin-top : 40px;
+  margin-bottom : 80px;
+}
+
+ui-knob {
+  padding-left : 10px;
+  padding-right : 10px;
+}
+
+#wordcloud {
+  position:relative;
+  border : solid 1px $border-grey;
+  height : 500px;
+  width:100%;
+  margin-bottom : 20px;
+
+  /deep/ text {
+    &:hover {
+      cursor:pointer;
+    }
+  }
+}
+

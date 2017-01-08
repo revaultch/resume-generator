@@ -1,0 +1,19 @@
+$orange:#e67e22;
+
+.intro, .fullname, app-avatar {
+    text-align: center;
+}
+
+.intro {
+    color : #ffffff;
+    text-transform: uppercase;
+    margin-bottom : 40px;
+    font-size:0.95em;
+}
+
+.fullname {
+    font-size: 55px;
+    color: $orange;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+

@@ -1,0 +1,1230 @@
+{
+    "personal": {
+        "title": "Full Stack / Java Senior Developer",
+        "name": {
+            "first": "Borja",
+            "last": "Fernandez"
+        },
+        "address": {
+            "street": "rue de la Cézille",
+            "number": "6",
+            "city": "Bassins",
+            "postal_code": "1269"
+        },
+        "email": "borja@fernandez.ch",
+        "birth_date": {
+            "year": "1974",
+            "month": "11",
+            "day": "18"
+        },
+        "nationality": [
+            "Spain",
+            "Switzerland"
+        ],
+        "civil_status": "Married, 2 children"
+    },
+    "work_experience": [
+        {
+            "start": {
+                "year": "1996",
+                "month": "1"
+            },
+            "end": {
+                "year": "1997",
+                "month": "6"
+            },
+            "role": "Developer / Business support engineer",
+            "company": "Capital International S.A.",
+            "projects": [
+                {
+                    "name": "Internship",
+                    "description": ["Part time internship as ESIGge student"],
+                    "roles": [
+                        "Developer"
+                    ],
+                    "skills": {
+                        "technical": [
+                            "Visual Basic",
+                            "Microsoft Access"
+                        ],
+                        "business": [
+                            "Mutual Funds",
+                            "Institutional Funds",
+                            "Pricing",
+                            "Fund unitization"
+                        ]
+                    },
+                    "duration": "10"
+                },
+                {
+                    "name": "Mutual fund reporting application",
+                    "description": ["Involved in mutual fund reporting application maintenance."],
+                    "roles": [
+                        "Developer",
+                        "Support Engineer"
+                    ],
+                    "skills": {
+                        "technical": [
+                            "Visual Basic",
+                            "Microsoft Access",
+                            "Microsoft Excel"
+                        ],
+                        "business": [
+                            "Mutual Funds"
+                        ]
+                    },
+                    "duration": "40"
+                },
+                {
+                    "name": "Fund unitization application",
+                    "description": ["Functional analysis + Development of stakeholder accounting application for company's mutual funds department."],
+                    "roles": [
+                        "Developer",
+                        "Business analyst"
+                    ],
+                    "skills": {
+                        "technical": [
+                            "Visual Basic",
+                            "Microsoft Access",
+                            "Microsoft Excel"
+                        ],
+                        "business": [
+                            "Private Banking",
+                            "Mutual Funds",
+                            "Institutional Funds",
+                            "Pricing",
+                            "Fund unitization"
+                        ]
+                    },
+                    "duration": "30"
+                },
+                {
+                    "name": "Fund unitization application",
+                    "description": ["Functional analysis + Development of a price controlling / reconciliation application", "This application helps management choosing between different stock information sources by providing source reliability figures (MSCI Perspective)."],
+                    "roles": [
+                        "Developer",
+                        "Business analyst"
+                    ],
+                    "skills": {
+                        "technical": [
+                            "Visual Basic",
+                            "Microsoft Access",
+                            "Microsoft Excel",
+                            "OLE automation"
+                        ],
+                        "business": [
+                            "Private Banking",
+                            "Mutual Funds",
+                            "Pricing"
+                        ]
+                    },
+                    "duration": "20"
+                }
+            ]
+        },
+        {
+            "start": {
+                "year": "1997",
+                "month": "7"
+            },
+            "end": {
+                "year": "1998",
+                "month": "12"
+            },
+            "role": "Consultant",
+            "company": "NODS SàRL",
+            "projects": [
+                {
+                    "name": "ClickNShop",
+                    "description": [
+                        "Development of online mall prototype",
+                        "Responsible for coordination and technical follow up with “NODS India” for full solution implementation",
+                        "Responsible for daily reporting to project manager / sponsors.",
+                        "Involved in various showrooms providing support to sales team."
+                    ],
+                    "roles": [
+                        "Developer"
+                    ],
+                    "skills": {
+                        "technical": [
+                            "ASP",
+                            "Photoshop"
+                        ],
+                        "business": [
+                            "Marketing",
+                            "Sales",
+                            "Consumer goods"
+                        ]
+                    },
+                    "duration": "20"
+                },
+                {
+                    "name": "Crystal (Intranet Nestlé France)",
+                    "company": "Nestlé France",
+                    "description": [
+                        "Involved in requirements gathering, developer applicant assessment",
+                        "Technical analysis writing",
+                        "Development of several intranet applications",
+                        "Coordination between team members (business analysts / developers and graphical artists)"
+                    ],
+                    "roles": [
+                        "Developer",
+                        "Coordinator",
+                        "Technical writer",
+                        "Business analyst"
+                    ],
+                    "skills": {
+                        "technical": [
+                            "HTML",
+                            "ASP",
+                            "Oracle"
+                        ],
+                        "business": [
+                            "Marketing",
+                            "Publishing",
+                            "Consumer goods"
+                        ]
+                    },
+                    "duration": "70"
+                },
+                {
+                    "name": "ILO HR Reporting",
+                    "company": "ILO",
+                    "description": [
+                        "Involved in development of several reports for ILO HR"
+                    ],
+                    "roles": [
+                        "Developer"
+                    ],
+                    "skills": {
+                        "technical": [
+                            "Visual Basic",
+                            "OLE automation"
+                        ],
+                        "business": [
+                            "ILO HR",
+                            "NGO"
+                        ]
+                    },
+                    "duration": "10"
+            }]
+        },
+
+
+
+
+                {
+                    "start": {
+                        "year": "1999",
+                        "month": "1"
+                    },
+                    "end": {
+                        "year": "2001",
+                        "month": "8"
+                    },
+                    "role": "Consultant",
+                    "company": "Cross Systems S.A.",
+                    "projects": [
+                        {
+                            "name": "Various projects for Lombard Odier & Cie",
+                            "description": [
+                                "Analysis / definition of XML standards for fund related documents.",
+                                "Involved in development of search & visualisation web application for fund data / documents",
+                                "Made extensive use of open source APIs in Java XML/XSL field during optimization project. This improved dramatically robustness and performance compared to formerly used commercial package"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "XML",
+                                    "XSL",
+                                    "JSP",
+                                    "Tomcat",
+                                    "eXcelon B2B server",
+                                    "Silverstream Application Server"
+                                ],
+                                "business": [
+                                    "Private Banking",
+                                    "Mutual Funds"
+                                ]
+                            },
+                            "duration": "100"
+                        }
+                    ]
+                },
+                {
+                    "start": {
+                        "year": "2001",
+                        "month": "9"
+                    },
+                    "end": {
+                        "year": "2005",
+                        "month": "12"
+                    },
+                    "role": "Consultant",
+                    "company": "e-Reality S.A.",
+                    "projects": [
+                        {
+                            "name": "WAP Instant messaging application",
+                            "description": [
+                                "Developed a WAP Instant messaging application (based on MSN protocol)"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java"
+                                ],
+                                "business": [
+                                    "Consulting",
+                                    "Telco"
+                                ]
+                            },
+                            "duration": "10"
+                        },
+                        {
+                            "name": "e-Reality's website",
+                            "description": [
+                                "Developed e-Reality's website (from A to Z – including graphics) (+ development / integration of software packages for intranet)"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "HTML",
+                                    "JavaScript",
+                                    "Java"
+                                ],
+                                "business": [
+                                    "Consulting"
+                                ]
+                            },
+                            "duration": "5"
+                        },
+                        {
+                            "name": ".NET internal course program",
+                            "description": [
+                                "Created internal .NET course for employees."
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    ".NET",
+                                    "C#"
+                                ],
+                                "business": [
+                                    "Consulting"
+                                ]
+                            },
+                            "duration": "10"
+                        },
+                        {
+                            "name": "Flat rate projects",
+                            "company": "Orange Communications S.A.",
+                            "description": [
+                                "Worked as lead developer on various flat rate projects."
+                            ],
+                            "roles": [
+                                "Lead Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Tomcat",
+                                    "SQL"
+                                ],
+                                "business": [
+                                    "Telco"
+                                ]
+                            },
+                            "duration": "20"
+                        },
+                        {
+                            "name": "SMS Fee charging and control application",
+                            "company": "Orange Communications S.A.",
+                            "description": [
+                                "Involved in SMS fee charging and control application development"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "BusinessWare EAI"
+                                ],
+                                "business": [
+                                    "Telco"
+                                ]
+                            },
+                            "duration": "10"
+                        },
+                        {
+                            "name": "Equity Brokerage",
+                            "company": "LODH & Cie",
+                            "description": [
+                                "Document management/publishing website. (Buy side reporting)."
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Tomcat",
+                                    "XSL",
+                                    "Oblix",
+                                    "JSP",
+                                    "JSF",
+                                    "Tomcat",
+                                    "Resin",
+                                    "Oracle",
+                                    "SQL"
+                                ],
+                                "business": [
+                                    "Mutual Funds"
+                                ]
+                            },
+                            "duration": "20"
+                        },
+                        {
+                            "name": "EasyJato",
+                            "company": "LODH & Cie",
+                            "description": [
+                                "Java code generator based on Sun's Jato MVC Framework (aka Sun ONE Application Framework)"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Resin"
+                                ],
+                                "business": [
+                                    "Private Banking",
+                                    "Mutual Funds"
+                                ]
+                            },
+                            "duration": "5"
+                        },
+                        {
+                            "name": "Sell Side Research",
+                            "company": "LODH & Cie",
+                            "description": [
+                                "Document management/publishing website. Analyst reporting (Sell Side). Used “Autonomy DRE” technology for document indexing."
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "XML",
+                                    "XSL",
+                                    "Oblix",
+                                    "JSP",
+                                    "Autonomy",
+                                    "Oracle",
+                                    "SQL"
+                                ],
+                                "business": [
+                                    "Private Banking",
+                                    "Mutual Funds"
+                                ]
+                            },
+                            "duration": "10"
+                        },
+                        {
+                            "name": "LODH Portal",
+                            "company": "LODH & Cie",
+                            "description": [
+                                "Migration/refactoring of various web applications (JSR-168 Portlet spec.)"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "JSF",
+                                    "Resin",
+                                    "JSR-168",
+                                    "Oracle",
+                                    "SQL"
+                                ],
+                                "business": [
+                                    "Private Banking",
+                                    "Mutual Funds"
+                                ]
+                            },
+                            "duration": "5"
+                        },
+                        {
+                            "name": "Deka",
+                            "company": "LODH & Cie",
+                            "description": [
+                                "Portfolio management application (Development of security API based on Oblix web services, Development of user management GUI (Swing))"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Tomcat",
+                                    "Swing",
+                                    "Oblix"
+                                ],
+                                "business": [
+                                    "Private Banking",
+                                    "Mutual Funds"
+                                ]
+                            },
+                            "duration": "5"
+                        }
+                    ]
+                },
+                {
+                    "start": {
+                        "year": "2006",
+                        "month": "1"
+                    },
+                    "end": {
+                        "year": "2009",
+                        "month": "4"
+                    },
+                    "role": "Consultant",
+                    "company": "Digitalis Consulting SàRL",
+                    "projects": [
+                        {
+                            "name": "Pictet Funds platform",
+                            "company": "Pictet & Cie",
+                            "description": [
+                                "Implementation of new features",
+                                "Refactoring of various reports (Factsheets, Monthly reports, etc.)",
+                                "Development of new compliance / regulation rules",
+                                "Development / enhancement of Web UI ",
+                                "Unit test coverage improvement",
+                                "Bug fixing and incident management",
+                                "Technical preparation and documentation for ATLAS project"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "JUnit",
+                                    "Spring",
+                                    "EJB",
+                                    "HTML",
+                                    "XSL:FO",
+                                    "JavaScript",
+                                    "Weblogic",
+                                    "Business analysis",
+                                    "Oracle",
+                                    "SQL",
+                                    "SVN",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "Private Banking",
+                                    "Mutual Funds"
+                                ]
+                            },
+                            "duration": "40"
+                        },
+                        {
+                            "name": "ATLAS (Re-design of PictetFunds.com platform)",
+                            "company": "Pictet & Cie",
+                            "description": [
+                                "As a developer I worked on several reporting support services such as Monthly report, Factsheet and various fund data related services",
+                                "As a developer / business analyst I also participated in UX workshops in navigation and widget definition",
+                                "As a project manager assistant I was involved in business analysis and business process analysis workshops with Pictet Funds, Pictet IT stakeholders",
+                                "I was also responsible for local and remote team coordination (SCRUM) and involved in sprint planning meetings",
+                                "Several change management tasks"
+                            ],
+                            "roles": [
+                                "Developer",
+                                "PM Assistant",
+                                "Business Analyst",
+                                "Change Manager"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "JUnit",
+                                    "Spring",
+                                    "EJB",
+                                    "HTML",
+                                    "XSL:FO",
+                                    "JavaScript",
+                                    "Weblogic",
+                                    "Business analysis",
+                                    "Oracle",
+                                    "SQL",
+                                    "Scrum",
+                                    "SVN",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "Private Banking",
+                                    "Mutual Funds"
+                                ]
+                            },
+                            "duration": "60"
+                        }
+                    ]
+                },
+                {
+                    "start": {
+                        "year": "2009",
+                        "month": "5"
+                    },
+                    "end": {
+                        "year": "2010",
+                        "month": "7"
+                    },
+                    "role": "Senior Developer",
+                    "company": "Zong S.A.",
+                    "projects": [
+                        {
+                            "name": "Enhancement of ZONG Payment process UI",
+                            "description": [
+                                "Modification / enhancement of payment process",
+                                "Implementation of new country workflows",
+                                "Implementation of country / carrier regulations and compliance rules"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Maven",
+                                    "Java",
+                                    "Spring",
+                                    "Spring MVC",
+                                    "Spring remoting",
+                                    "JQuery",
+                                    "Flash",
+                                    "Rest",
+                                    "JavaScript",
+                                    "JQuery",
+                                    "Hibernate",
+                                    "Scrum",
+                                    "SVN",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "Startup",
+                                    "Mobile payment"
+                                ]
+                            },
+                            "duration": "30"
+                        },
+                        {
+                            "name": "Design and development of merchant console",
+                            "description": [
+                                "Development of Grails console",
+                                "Development of Java backend",
+                                "Integration of existing services / subsystems"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Maven",
+                                    "Java",
+                                    "Spring",
+                                    "Spring remoting",
+                                    "Grails",
+                                    "Esper",
+                                    "JQuery",
+                                    "Flash",
+                                    "Rest",
+                                    "Scrum",
+                                    "SVN",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "Startup",
+                                    "Mobile payment"
+                                ]
+                            },
+                            "duration": "30"
+                        },
+                        {
+                            "name": "Design and development of consumer console",
+                            "description": [
+                                "Development of Grails console",
+                                "Development of Java backend",
+                                "Integration of existing services / subsystems",
+                                "Coordination with US marketing team"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Maven",
+                                    "Java",
+                                    "Spring",
+                                    "Spring remoting",
+                                    "Grails",
+                                    "Groovy",
+                                    "Esper",
+                                    "JQuery",
+                                    "Flash",
+                                    "Rest",
+                                    "Scrum",
+                                    "SVN",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "Startup",
+                                    "Mobile payment"
+                                ]
+                            },
+                            "duration": "20"
+                        },
+                        {
+                            "name": "Zong+",
+                            "description": [
+                                "UX / UI design and implementation"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Maven",
+                                    "Java",
+                                    "Spring",
+                                    "Spring MVC",
+                                    "Spring Webflow",
+                                    "JQuery",
+                                    "Rest",
+                                    "Hibernate",
+                                    "Scrum",
+                                    "SVN",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "Startup",
+                                    "Mobile payment"
+                                ]
+                            },
+                            "duration": "20"
+                        }
+                    ]
+                },
+                {
+                    "start": {
+                        "year": "2010",
+                        "month": "8"
+                    },
+                    "end": {
+                        "year": "2012",
+                        "month": "10"
+                    },
+                    "role": "Senior Java Developer",
+                    "company": "Adeya S.A.",
+                    "projects": [
+                        {
+                            "name": "Adeya Legacy Gate system",
+                            "description": [
+                                "Installation / configuration of a continuous integration environment",
+                                "Definition of QA process and environment setup",
+                                "Integration / validation of offshore deliverables"
+                            ],
+                            "roles": [
+                                "Developer, Integrator"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Maven",
+                                    "Jenkins CI",
+                                    "Target Process",
+                                    "Asterisk",
+                                    "Scrum",
+                                    "Git",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "Startup",
+                                    "Telco",
+                                    "Cryptography"
+                                ]
+                            },
+                            "duration": "20"
+                        },
+                        {
+                            "name": "Adeya Secure Framework",
+                            "description": [
+                                "Development of voice / data encryption framework",
+                                "Development of pluggable mutual authentication system",
+                                "Development of pluggable key agreement system",
+                                "Development of several demo apps"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Maven",
+                                    "Java",
+                                    "Apache Mina",
+                                    "JCE / JCA",
+                                    "Bouncy Castle",
+                                    "OSGI",
+                                    "Visual Paradigm UML",
+                                    "Git",
+                                    "Scrum",
+                                    "Android",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "Startup",
+                                    "Telco",
+                                    "Cryptography"
+                                ]
+                            },
+                            "duration": "60"
+                        },
+                        {
+                            "name": "Performance Testing Monitor Dashboard",
+                            "description": [
+                                "Design and implementation of a webapp for QA department for performance tests metrics"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Grails",
+                                    "JQuery",
+                                    "JQPlot",
+                                    "JavaScript",
+                                    "HTML5",
+                                    "Jenkins CI",
+                                    "Git",
+                                    "Scrum"
+                                ],
+                                "business": [
+                                    "Startup",
+                                    "Telco",
+                                    "Cryptography"
+                                ]
+                            },
+                            "duration": "20"
+                        }
+                    ]
+                },
+                {
+                    "start": {
+                        "year": "2012",
+                        "month": "11"
+                    },
+                    "end": {
+                        "year": "2014",
+                        "month": "2"
+                    },
+                    "role": "Senior Developer",
+                    "company": "IKentoo S.A.",
+                    "projects": [
+                        {
+                            "name": "Loyalty card platform",
+                            "description": [
+                                "Design / development of VIP discount card system",
+                                "Design / development of PUNCH reward card system",
+                                "Design / development of ID cards (general purpose with pluggable features)",
+                                "Integration with POS system",
+                                "Design / development of custom JQuery plugins"
+                            ],
+                            "roles": [
+                                "Developer",
+                                "Business analyst"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "Spring RESTful services",
+                                    "Maven",
+                                    "Jira",
+                                    "Git",
+                                    "Grails",
+                                    "MySql",
+                                    "JavaScript",
+                                    "JQuery",
+                                    "HTML5",
+                                    "CSS3",
+                                    "Groovy",
+                                    "JDO",
+                                    "Trello",
+                                    "Bootstrap"
+                                ],
+                                "business": [
+                                    "Hospitality",
+                                    "Point of sales"
+                                ]
+                            },
+                            "duration": "40"
+                        },
+                        {
+                            "name": "Mobile Wallet",
+                            "description": [
+                                "Design / development of a mobile wallet with POS integration"
+                            ],
+                            "roles": [
+                                "Developer",
+                                "Business analyst"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "Spring RESTful services",
+                                    "Maven",
+                                    "Jira",
+                                    "Git",
+                                    "Grails",
+                                    "MySql",
+                                    "JavaScript",
+                                    "JQuery",
+                                    "HTML5",
+                                    "CSS3",
+                                    "Groovy",
+                                    "JDO",
+                                    "Trello",
+                                    "Bootstrap"
+                                ],
+                                "business": [
+                                    "Hospitality",
+                                    "Point of sales"
+                                ]
+                            },
+                            "duration": "20"
+                        },
+                        {
+                            "name": "IKDEBT debtors management system",
+                            "description": [
+                                "Design / Development of ID card system pluggable feature for hotels corporate clients"
+                            ],
+                            "roles": [
+                                "Developer",
+                                "Business analyst"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "Spring RESTful services",
+                                    "Maven",
+                                    "Jira",
+                                    "Git",
+                                    "Grails",
+                                    "MySql",
+                                    "JavaScript",
+                                    "JQuery",
+                                    "HTML5",
+                                    "CSS3",
+                                    "Groovy",
+                                    "JDO",
+                                    "Trello",
+                                    "Bootstrap"
+                                ],
+                                "business": [
+                                    "Hospitality",
+                                    "Point of sales"
+                                ]
+                            },
+                            "duration": "10"
+                        },
+                        {
+                            "name": "Consumer payment engine (self checkout)",
+                            "description": [
+                                "Development of a selfcheckout system that allows clients to pay via a pluggable payment provider"
+                            ],
+                            "roles": [
+                                "Developer",
+                                "Business analyst"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "Maven",
+                                    "Jira",
+                                    "Git",
+                                    "Grails",
+                                    "Groovy",
+                                    "JDO",
+                                    "MySql",
+                                    "Trello",
+                                    "Spring RESTful services",
+                                    "HTML5",
+                                    "CSS3",
+                                    "JQuery",
+                                    "JavaScript",
+                                    "Bootstrap"
+                                ],
+                                "business": [
+                                    "Hospitality, Point of sales"
+                                ]
+                            },
+                            "duration": "20"
+                        },
+                        {
+                            "name": "Reporting",
+                            "description": [
+                                "Implementation / refactoring of various reports"
+                            ],
+                            "roles": [
+                                "Developer",
+                                "Business analyst"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "Maven",
+                                    "Jira",
+                                    "Git",
+                                    "Grails",
+                                    "Groovy",
+                                    "JDO",
+                                    "MySql",
+                                    "Trello",
+                                    "Spring RESTful services",
+                                    "HTML5",
+                                    "CSS3",
+                                    "JQuery",
+                                    "JavaScript",
+                                    "Bootstrap"
+                                ],
+                                "business": [
+                                    "Hospitality, Point of sales"
+                                ]
+                            },
+                            "duration": "10"
+                        }
+                    ]
+                },
+                {
+                    "start": {
+                        "year": "2014",
+                        "month": "3"
+                    },
+                    "end": {
+                        "year": "2015",
+                        "month": "8"
+                    },
+                    "role": "Consultant",
+                    "company": "IBSC S.A.",
+                    "projects": [
+                        {
+                            "name": "Fund Trading Platform",
+                            "company": "Pictet & Cie S.A.",
+                            "description": [
+                                "Various projects in Fund Trading Platform"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "Spring Boot",
+                                    "Jira",
+                                    "HTML5",
+                                    "AngularJS",
+                                    "Bootstrap",
+                                    "Spring Integration",
+                                    "Maven",
+                                    "Drools",
+                                    "Hibernate",
+                                    "Rest",
+                                    "JUnit",
+                                    "Git"
+                                ],
+                                "business": [
+                                    "Private Banking"
+                                ]
+                            },
+                            "duration": "100"
+                        }
+                    ]
+                },
+                {
+                    "start": {
+                        "year": "2014",
+                        "month": "1"
+                    },
+                    "role": "Co-Founder, Full-stack developer",
+                    "company": "revault.ch",
+                    "projects": [
+                        {
+                            "name": "reblock.ch",
+                            "start": {
+                                "year": "2015",
+                                "month": "6"
+                            },
+                            "description": [
+                                "Development of a landline call blocking mobile application"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "Spring Boot",
+                                    "HTML5",
+                                    "AngularJS",
+                                    "Bootstrap",
+                                    "Maven",
+                                    "Drools",
+                                    "Hibernate",
+                                    "Rest",
+                                    "JUnit",
+                                    "Git",
+                                    "Cordova",
+                                    "chef.io",
+                                    "c++",
+                                    "Android",
+                                    "iOS"
+                                ],
+                                "business": [
+                                    "Startup",
+                                    "Telco"
+                                ]
+                            },
+                            "duration": "10m"
+                        },
+                        {
+                            "name": "Adeya Provisioning Console",
+                            "start": {
+                                "year": "2016",
+                                "month": "1"
+                            },
+                            "company": "Adeya S.A.",
+                            "description": [
+                                "Involved in development of a PKI web console"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "HTML5",
+                                    "AngularJS",
+                                    "Bootstrap",
+                                    "Maven",
+                                    "Hibernate",
+                                    "Rest",
+                                    "JUnit",
+                                    "Git",
+                                    "Couchbase",
+                                    "PostgreSQL",
+                                    "Swagger"
+                                ],
+                                "business": [
+                                    "Startup",
+                                    "Telco",
+                                    "Cryptography"
+                                ]
+                            },
+                            "duration": "8m"
+                        },
+                        {
+                            "name": "TCS self service QA console",
+                            "start": {
+                                "year": "2016",
+                                "month": "7"
+                            },
+                            "company": "Touring Club Suisse",
+                            "description": [
+                                "Development of a resource reservation / test scheduling console"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "HTML5",
+                                    "Bootstrap",
+                                    "BootFlat",
+                                    "CSS3",
+                                    "JavaScript",
+                                    "Angular2",
+                                    "Maven",
+                                    "Rest",
+                                    "JUnit",
+                                    "Git",
+                                    "Swagger"
+                                ],
+                                "business": [
+                                    "Insurance"
+                                ]
+                            },
+                            "duration": "1m"
+                        },
+                        {
+                            "name": "TCS CRM Test Automation",
+                            "start": {
+                                "year": "2016",
+                                "month": "9"
+                            },
+                            "company": "Touring Club Suisse",
+                            "description": [
+                                "Development of several SalesForce TCS workflow custom integration tests"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "Maven",
+                                    "Git",
+                                    "Selenium",
+                                    "Jira",
+                                    "SalesForce",
+                                    "Cucumber",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "Insurance"
+                                ]
+                            },
+                            "duration": "4m"
+                        }
+                    ]
+                }
+            ]
+,    "skills" : [],
+    "Education" : [],
+    "languages": [
+        "French",
+        "Spanish",
+        "English",
+        "Basic German"
+    ]
+}

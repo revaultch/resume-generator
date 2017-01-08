@@ -1,0 +1,37 @@
+$darker-blue:#2d4052;
+$dark-blue:#34495e;
+$white:#ffffff;
+$orange:#e67e22;
+
+
+.menu-container {
+    height:28px;
+    background-color : $dark-blue;
+    border-top: solid 1px $darker-blue;
+}
+
+.menu {
+    position:absolute;
+    right:0px;
+    display: flex;
+    flex-direction: row;
+    padding-right:40px;
+}
+
+.menu-item {
+    margin-right : 20px;
+    color:$white;
+    text-transform: uppercase;
+    padding-right: 5px;
+    padding-left : 5px;
+}
+
+
+
+.menu-item:hover {
+    cursor:pointer;
+    background-color : $orange;
+    height : 60px;
+    display: table-cell;
+    vertical-align: bottom;
+}

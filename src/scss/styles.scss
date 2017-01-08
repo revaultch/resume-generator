@@ -1,0 +1,152 @@
+$dark-blue:#34495e;
+$light-blue:#3a73bf;
+$orange:#e67e22;
+$light-grey:#e6e9ed;
+$red-dingue:#c0392b;
+$white:#ffffff;
+
+
+
+@font-face {
+  font-family: 'Baloo Paaji';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/assets/fonts/baloo-paaji-v1-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/assets/fonts/baloo-paaji-v1-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/assets/fonts/roboto-light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/assets/fonts/roboto-light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+@font-face {
+  font-family: 'Metrize Icons';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/assets/fonts/metrize-icons.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/assets/fonts/metrize-icons.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+$base-main-title-font-family : Baloo Paaji, sans-serif;
+
+$paragraph-font-family : Roboto Light, sans-serif;
+
+$icon-font-family : Metrize Icons, sans-serif;
+
+
+
+html {
+    height: 100%;
+    body {
+        font-family: $paragraph-font-family;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+        text-rendering: optimizeLegibility !important;
+        -webkit-font-smoothing: antialiased !important;
+        margin : 0px;
+    }    
+}
+
+
+h1, h2, h3, h4, .menu-item {
+    font-family: $base-main-title-font-family ;
+}
+
+.icon {
+    font-family: $icon-font-family !important;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    padding-top:40px;
+}
+
+.section-w-padding {
+    box-sizing: border-box;
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom : 40px;
+    @extend .section;
+}
+
+.paragraph {
+    font-size:1.1em;
+    padding-top:20px;
+    padding-bottom:10px;
+    text-align:justify;
+}
+
+
+
+app-header {
+    background-color:$dark-blue;
+    @extend .section;
+}
+
+
+app-ataglance {
+    background-color:$light-grey;
+    @extend .section-w-padding;
+
+    h1 {
+        text-align: left;
+        color : $orange;
+        font-size : 1.8em;
+    }
+}
+
+app-history {
+    h1 {
+        text-align : right;
+        color : $red-dingue;
+        font-size : 1.8em;
+    }
+    @extend .section-w-padding;
+}
+
+app-skills {
+    background-color:$light-grey;
+    h1 {
+        color : $orange;
+        text-align : left;
+        font-size : 1.8em;
+    }
+    @extend .section-w-padding;
+}
+
+
+app-companies {
+    background-color:$light-grey;
+    h1 {
+        color : $orange;
+        text-align : left;
+        font-size : 1.8em;
+    }
+    @extend .section-w-padding;
+}
+
+
+app-rates {
+    background-color:$orange;
+    color: $white;
+    h1 {
+        text-align : center;
+        color : $white;
+        font-size : 1.8em;
+    }
+    @extend .section-w-padding;
+}
+
+
+app-footer {
+    background-color:$dark-blue;
+    color: $light-blue;
+    @extend .section;
+}

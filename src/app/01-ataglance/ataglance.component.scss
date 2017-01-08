@@ -1,0 +1,33 @@
+.textwicon {
+    padding-top:20px;
+    padding-bottom:20px;
+    display:flex;
+    background-image: url(/assets/images/ataglance/default.png) ;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    &.left {
+        .title {
+            text-align: left;
+        }
+        flex-direction: row;
+        padding-left : 120px;
+        background-position-x:left;
+    }
+    &.right {
+        .title {
+            text-align: right;
+        }
+        flex-direction: row-reverse;
+        padding-right : 120px;
+        background-position-x:right;
+    }
+    .text {
+        text-align:justify;
+        width : 30%;
+        font-size: 0.8em;
+    }
+}
+
+h2 {
+    text-align:center;
+}
