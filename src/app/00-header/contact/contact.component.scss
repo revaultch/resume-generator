@@ -1,26 +1,47 @@
 $white : #ffffff;
 $orange:#e67e22;
 
-
-.contact {
+.contact.header {
     position: absolute;
     top : 150px;
     right : 50px;
-}
-.buttons {
-    display:flex;
-    flex-direction: column;
-}
-.icon {
-    margin-bottom:10px;
-    font-size: 60px;
-    color : $white;
-    border : solid 3px transparent;
+
+    .buttons {
+        display:flex;
+        flex-direction: column;
+    }
+    .icon {
+        margin-bottom:10px;
+        font-size: 60px;
+        color : $white;
+        border : solid 3px transparent;
+        height:66px;
+    }
+
+    .icon:hover {
+        cursor:pointer;
+        color:$orange;
+        font-size : 66px;
+        border : 0;
+    }
+
 }
 
-.icon:hover {
-    cursor:pointer;
-    color:$orange;
-    font-size : 66px;
-    border : 0;
+.contact.footer {
+    position: inherit !important;
+    margin-top : 40px;
+    margin-bottom : 100px;
+    .buttons {
+        display:flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: center;
+        .icon {
+            font-size : 40px;
+            margin-left : 10px;
+            margin-right : 10px;        
+        }
+    }
+
+
 }

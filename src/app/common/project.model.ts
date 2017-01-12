@@ -83,6 +83,10 @@ export class Project {
         return estimatedEnd;
     }
 
+    get id(): string {
+        return this._name.split(' ').join('_');
+    }
+
 
 
 }

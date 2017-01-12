@@ -30,8 +30,8 @@ export class SkillsComponent implements AfterViewInit {
         'trackWidth': 10,
         'barWidth': 15,
         'trackColor': 'rgba(200,200,200,.8)',
-        'barColor': 'rgba(255,0,0,.5)',
-        'prevBarColor': 'rgba(255,0,0,.2)',
+        'barColor': '#e67e22',
+        'prevBarColor': '#e67e22',
         'textColor': '#000000',
         'barCap': 0,
         'trackCap': 0,
@@ -70,7 +70,7 @@ export class SkillsComponent implements AfterViewInit {
     };
 
 
-    valueChange() {
+    valueChange(event:any) {
         this.obs.next(event);
     }
 
@@ -204,8 +204,16 @@ export class SkillsComponent implements AfterViewInit {
 
     resizeEvent(event: any) {
         this.buildWordCloud();
-        this.valueChange();
+        this.valueChange(event);
     }
 }
 
 
+
+/*
+
+presets todo :
+
+
+
+*/

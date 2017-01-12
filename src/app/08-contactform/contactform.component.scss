@@ -1,0 +1,61 @@
+@import '../../scss/colors';
+$darken-violence : darken($violence, 10%);
+
+
+
+form[name = "contact-form"] {
+    display:flex;
+    flex-direction: column;
+    width : 100%;
+    margin-top : 40px;
+    margin-bottom : 40px;
+    text-align:center;
+    * {
+        width : 80%;
+        margin-top : 10px !important;
+        margin-bottom : 10px !important;
+        margin-left: auto;
+        margin-right : auto;
+        border : 1px solid $darken-violence;
+        background-color : $violence-light !important;
+        color : $white !important;
+        font-size : 1.2em;
+        padding : 10px;
+        
+            &::-webkit-input-placeholder {
+                color: $violence
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+                color: $violence
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+                color: $violence;
+            }
+
+            &:-ms-input-placeholder {  
+                color: $violence;
+            }
+
+    }
+    input {
+        &[type = "submit"] {
+            height : 4.0em;
+            background-color : $orange !important;
+            color : $white !important;
+            width : 60% !important;
+            cursor : pointer;
+            margin-top : 40px !important;
+            margin-bottom : 40p !important;
+            &:hover {
+                background-color : $white !important;
+                color : $orange !important;
+            }
+        }
+    }
+    textarea {
+        height : 400px;
+    }
+
+}

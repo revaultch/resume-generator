@@ -15,7 +15,10 @@ import { HistoryService } from './02-history/history.service';
 import { SkillsComponent } from './04-skills/skills.component';
 import { SkillsService } from './04-skills/skills.service';
 import { CompaniesComponent } from './05-companies/companies.component';
+import { LogoStripComponent } from './05-companies/logo/logo-strip.component';
+import { LogoComponent } from './05-companies/logo/logo.component';
 import { RatesComponent } from './07-rates/rates.component';
+import { ContactFormComponent } from './08-contactform/contactform.component';
 import { FooterComponent } from './10-footer/footer.component';
 import { KnobComponent } from '../ext/knob/knob.component';
 import { DataService } from './common/data.service';
@@ -26,16 +29,20 @@ import { DataService } from './common/data.service';
     HeaderComponent,
     IntroComponent,
     MenuComponent,
-    ContactComponent,
+    ContactFormComponent,
     AvatarComponent,
     AtaglanceComponent,
     HistoryComponent,
     SkillsComponent,
     CompaniesComponent,
+    LogoStripComponent,
+    LogoComponent,
+    ContactComponent,
     RatesComponent,
     FooterComponent,
     KnobComponent
   ],
+  entryComponents: [LogoStripComponent, LogoComponent],
   imports: [
     BrowserModule,
     FormsModule,

@@ -12,29 +12,26 @@ export class HistoryService {
     }
 
 
-    public getProjects(): Observable<Array<Project>> {
+    public getProjects(): Observable<Project> {
         return Observable.create((observer) => {
-            let projects = new Array<Project>();
-
-
-                this._dataService.getExperiences().subscribe((experiences) => {
-                    for (let experience of experiences) {
-                        for (let project of experience.projects) {
-                            projects.push(project);
-                        }
+            this._dataService.getExperiences().subscribe((experiences) => {
+                for (let experience of experiences) {
+                    for (let project of experience.projects) {
+                        observer.next(project);
                     }
+                }
 
-                }, (err) => { throw err; },
-                    () => {
-                        observer.next(projects);
-                        observer.complete();
-                    });
-
-
-
+            }, (err) => { throw err; },
+                () => {
+                    observer.complete();
+                });
 
         });
     }
 
+
+    public getProject(id: string): Observable<Project> {
+        return this.getProjects().first((p, idx, obs) => { return p.id === id; });
+    }
 
 }

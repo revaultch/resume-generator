@@ -99,7 +99,7 @@
                     "duration": "30"
                 },
                 {
-                    "name": "Fund unitization application",
+                    "name": "Price monitor",
                     "description": ["Functional analysis + Development of a price controlling / reconciliation application", "This application helps management choosing between different stock information sources by providing source reliability figures (MSCI Perspective)."],
                     "roles": [
                         "Developer",

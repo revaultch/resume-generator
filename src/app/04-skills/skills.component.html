@@ -10,12 +10,12 @@
     </div>
     -->
     <div class="controls">
-        <ui-knob [(value)]="skillCriteria.linkedInScore" [options]="linkedInScoreKnobOptions" (valueChange)="valueChange()"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.nbOfProjects" [options]="nbOfProjectsKnobOptions" (valueChange)="valueChange()"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.confidence" [options]="confidenceKnobOptions" (valueChange)="valueChange()"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.daysDone" [options]="daysDoneKnobOptions" (valueChange)="valueChange()"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.interest" [options]="interestKnobOptions" (valueChange)="valueChange()"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.lastTimeSeen" [options]="lastTimeSeenKnobOptions" (valueChange)="valueChange()"></ui-knob>
+        <ui-knob [(value)]="skillCriteria.linkedInScore" [options]="linkedInScoreKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+        <ui-knob [(value)]="skillCriteria.nbOfProjects" [options]="nbOfProjectsKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+        <ui-knob [(value)]="skillCriteria.confidence" [options]="confidenceKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+        <ui-knob [(value)]="skillCriteria.daysDone" [options]="daysDoneKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+        <ui-knob [(value)]="skillCriteria.interest" [options]="interestKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+        <ui-knob [(value)]="skillCriteria.lastTimeSeen" [options]="lastTimeSeenKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
     </div>
 </div>
 

@@ -1,19 +1,27 @@
-$orange:#e67e22;
+@import '../../../scss/colors';
+@import '../../../scss/fonts';
 
-.intro, .fullname, app-avatar {
+
+.intro, .fullname {
     text-align: center;
 }
 
 .intro {
     color : #ffffff;
-    text-transform: uppercase;
     margin-bottom : 40px;
-    font-size:0.95em;
+    font-family : $paragraph-font-family;
+    font-size : 1.2em;
+
+    &.smaller {
+        font-size : 1.0em;
+    }
+
 }
 
 .fullname {
     font-size: 55px;
     color: $orange;
+    font-family : $full-name-font-family !important;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 }
 

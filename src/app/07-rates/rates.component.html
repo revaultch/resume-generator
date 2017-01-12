@@ -1,4 +1,32 @@
 <h1>Rates</h1>
 <div class="paragraph">Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </div>
-<div id="rates"></div>
+<div id="rates">
+
+    <div>
+        <span>bleeding edge</span>
+        <input type="range" [(ngModel)]="technologyRating" min="0" max="100" (change)="refreshRate()"/>
+        <span>cutting edge</span>
+    </div>
+
+    <div>
+        <span>politics everywhere</span>
+        <input type="range" [(ngModel)]="environmentRating" min="0" max="100"  (change)="refreshRate()"/>
+        <span>friendly team</span>
+    </div>
+    <div>
+        <span>far far away</span>
+        <input type="range" [(ngModel)]="distanceRating" min="0" max="100"  (change)="refreshRate()"/>
+        <span>close home w/remoting</span>
+    </div>
+    <div>
+        <span>one shot quick dev</span>
+        <input type="range" [(ngModel)]="durationRating" min="0" max="100"  (change)="refreshRate()"/>
+        <span>long term project</span>
+    </div>
+    
+    <div class="rate"><span>An approximate cost of</span><h1>{{result}} CHF / $</h1><span>per day</span></div>
+
+</div>
+
+
 <div class="paragraph">Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </div>

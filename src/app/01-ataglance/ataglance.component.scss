@@ -1,6 +1,6 @@
 .textwicon {
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:40px;
+    padding-bottom:40px;
     display:flex;
     background-image: url(/assets/images/ataglance/default.png) ;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
         .title {
             text-align: left;
         }
-        flex-direction: row;
+        flex-direction: column;
         padding-left : 120px;
         background-position-x:left;
     }
@@ -17,13 +17,13 @@
         .title {
             text-align: right;
         }
-        flex-direction: row-reverse;
+        flex-direction: column;
         padding-right : 120px;
         background-position-x:right;
     }
     .text {
         text-align:justify;
-        width : 30%;
+        width : 80%;
         font-size: 0.8em;
     }
 }

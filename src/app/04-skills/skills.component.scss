@@ -29,9 +29,19 @@ $border-grey: #dddddd;
 }
 
 .controls {
-  display:flex;
-  flex-direction: row;
   justify-content: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+
+
+  ui-knob {
+    padding-left : 10px;
+    padding-right : 10px;
+  }
 }
 
 .skillviewer {
@@ -43,10 +53,6 @@ $border-grey: #dddddd;
   margin-bottom : 80px;
 }
 
-ui-knob {
-  padding-left : 10px;
-  padding-right : 10px;
-}
 
 #wordcloud {
   position:relative;
