@@ -1,10 +1,4 @@
-@font-face {
-  font-family: 'Baloo Paaji';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/assets/fonts/Baloo-Paaji.woff2') format('woff2'), 
-       url('/assets/fonts/Baloo-Paaji.woff') format('woff'); 
-}
+@import 'metrize.scss';
 
 
 @font-face {
@@ -32,20 +26,14 @@
        url('/assets/fonts/Lato-Heavy.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'Metrize Icons';
-  font-style: normal;
-  font-weight: 100;
-  src: url('/assets/fonts/metrize-icons.woff2') format('woff2'), 
-       url('/assets/fonts/metrize-icons.woff') format('woff');
-}
-
-$full-name-font-family: Baloo Paaji, sans-serif;
-
 $base-title-2-family : Lato Heavy, sans-serif;
 
 $base-main-title-font-family : Lato Thin, sans-serif;
 
-$paragraph-font-family : Lato Regular, sans-serif;
+$base-thin-font-family : Lato Thin, sans-serif;
 
-$icon-font-family : Metrize Icons, sans-serif;
+$base-regular-font-family : Lato Regular, sans-serif;
+
+$paragraph-font-family : Lato Thin, sans-serif;
+
+$icon-font-family : Metrize-Icons, sans-serif;

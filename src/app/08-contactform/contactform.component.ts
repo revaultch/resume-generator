@@ -1,30 +1,38 @@
-import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailValidator } from './email.validator';
+import { Component, OnInit } from '@angular/core';
 import { Http, Headers, Request, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-
 
 @Component({
   selector: 'app-contactform',
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss']
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements OnInit {
 
   private formspreeUrl = 'https://formspree.io/littleboris@gmail.com';
 
-  private data: any = {};
+  private data: FormGroup;
 
-  private dataValid = false;
+  private _submitFailed = false;
 
-  private submitFailed = false;
+  private _formSent = false;
 
-  private done = false;
+  constructor(private _http: Http, private _fb: FormBuilder) { }
 
-  constructor(private _http: Http) { }
+  ngOnInit() {
+    this.data = this._fb.group({
+      name : ['', Validators.required],
+      company : [''],
+      email : ['', Validators.compose([Validators.required, EmailValidator.email])],
+      message : ['', Validators.required]
+    });
+  }
 
-  onSubmit() {
+  onSubmit({value, valid}: {value: any, valid: boolean}) {
 
-    let bodyString = JSON.stringify(this.data);
+    let bodyString = JSON.stringify(value);
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
@@ -32,12 +40,14 @@ export class ContactFormComponent {
     this._http.post(this.formspreeUrl, bodyString, options)
       .map((res: Response) => res.json())
       .subscribe((data) => {
-
+        this._formSent = true;
       }, (err) => {
-        this.submitFailed = true;
+        this._submitFailed = true;
       }, () => {
       });
 
 
   }
 }
+
+

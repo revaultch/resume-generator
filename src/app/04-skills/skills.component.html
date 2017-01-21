@@ -1,25 +1,37 @@
-<h1>Skills</h1>
-<div class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
-<div class="paragraph">
-    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
-<div class="skillviewer">
-    <div id="wordcloud" (window:resize)="resizeEvent($event)"  (click)="cloudClick($event.target)">
+<h1>SKILLS</h1>
+<section>
+<p>Skills are the tools you need to make your projects come true. By themselves they are just that ... simple tools. Sometimes temptation is too great to make them become the center of our world. But we should never forget that these tools are there for one sole reason : <b>creating value</b>. </p>
+<p>We should always choose the right tools for the job. With that said it's far from being an easy task but we should never forget that we're also responsible for the tools we choose to use.</p>
+<p>With that in mind, here's another component that uses the same datasource as before to list my skills given some criteria. (note that the results are limited to 20 rows)</p>
+</section>
+<div class="skillviewer" (window:resize)="resetKnobs($event)">
+    <div class="presets">
+        <span></span>
+        <select (change)="presetSelected($event)" [(ngModel)]="_selectedPreset" placeholder="Select a preset">
+            <option *ngFor="let item of _presets" disabled="{{item.id == -1 ? 'disabled' : ''}}" [ngValue]="item">{{item.name}}</option>
+        </select>
     </div>
-    <!--
-    <div class="treemap">
-    </div>
-    -->
     <div class="controls">
-        <ui-knob [(value)]="skillCriteria.linkedInScore" [options]="linkedInScoreKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.nbOfProjects" [options]="nbOfProjectsKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.confidence" [options]="confidenceKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.daysDone" [options]="daysDoneKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.interest" [options]="interestKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
-        <ui-knob [(value)]="skillCriteria.lastTimeSeen" [options]="lastTimeSeenKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+        <span>&nbsp;</span>
+        <div class="knob">
+            <ui-knob [(value)]="skillCriteria.weeksDone" [options]="weeksDoneKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+            <span>total weeks spent</span>
+        </div>
+        <div class="knob">
+            <ui-knob [(value)]="skillCriteria.nbOfProjects" [options]="nbOfProjectsKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+            <span>projects</span>
+        </div>
+        <div class="knob">
+            <ui-knob [(value)]="skillCriteria.linkedInScore" [options]="linkedInScoreKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+            <span>linkedIn score</span>
+        </div>
+        <span><div>last used</div></span>
     </div>
+    <app-skilllist [skills]="skills"></app-skilllist>
 </div>
-
-<div class="paragraph">
-    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
+<section>
+<p>As you can see Java takes the lead! There's a good reason for that. This language has been around for a while and combined with Spring it is still today highly relevant. There's also a relatively high demand nowadays (early 2017) especially in the banking industry. </p>
+<p>However, I've been working a lot with front-end technologies for the past 5 years, first with plain old JavaScript and HTML, then came JQuery and the power it brought to the masses and then things became a lot more serious with NodeJS, Angular, React and TypeScript. I think there's a massive revolution going on and that these new JS stacks are here to stay !</p>
+</section>
 
 

@@ -1,0 +1,17 @@
+<ul>
+    <li *ngFor="let project of projects; trackBy: projectTrackByFn" [class.selected]="_selected?.id === project.id" (click)="select(project)">
+        <div>
+            <div>
+                <div [ngStyle]="{background: 'url(../../assets/images/logos/' + project.logo + '.png)'}">
+                    &nbsp;
+                </div>
+            </div>
+            <div>{{project.name}}</div>
+            <div>{{project.company}}</div>
+        </div>
+        <div [ngClass]="{'closed' : project.id !== _selected?.id}">
+            <span></span>
+            <app-projectdetail [project]="project"></app-projectdetail>
+        </div>
+    </li>
+</ul>

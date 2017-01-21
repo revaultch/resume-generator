@@ -1,42 +1,16 @@
-<h1>History</h1>
-<div class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
-<div class="paragraph">Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </div>
-<div id="history_container" [class.detailmode]="_detailIsVisible">
-    <div id="timeline"></div>
-    <div id="detail" (click)="_detailIsVisible=false">
-        <div>
-            <h2>{{project?.name}}</h2>
-        </div>
-        <div>
-            from <strong>{{project?.estimatedStart.toLocaleDateString()}}</strong> to <strong>{{project?.estimatedEnd.toLocaleDateString()}}</strong>
-        </div>
-        <div>
-            <h3>Roles</h3>
-            <ul>
-                <li *ngFor="let item of project?.roles; let i = index">{{item}}</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Description</h3>
-            <ul>
-                <li *ngFor="let item of project?.description; let i = index">{{item}}</li>
-            </ul>
-        </div>
-        <div class="skills">
-            <div>
-                <h3>Technical skills</h3>
-                <ul>
-                    <li *ngFor="let item of project?.techSkills; let i = index">{{item}}</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Business skills</h3>
-                <ul>
-                    <li *ngFor="let item of project?.businessSkills; let i = index">{{item}}</li>
-                </ul>
-            </div>
-        </div>
+<div id="laceparent">
+    <div id="lace1">
     </div>
 </div>
-<div class="paragraph">Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </div>
-
+<h1>HISTORY</h1>
+<section>
+<p>Through the years I have worked on multiple projects and experienced a wide range of technologies. While a new language or a new framework can seem exciting at first it often takes a lot of work to become proficient. But then as time goes by, you realise that the same concepts get recycled every now and then and this is where experience comes into play. I believe that for the most part, experience is about recognizing patterns and concepts and finding the answer to questions by adapting knowledge to a new situation.</p>
+<p>Talking about experience, let's have a look at the following component. This is a list containing most of the projects I've been involved in. The table is sorted in reverse order and a features a timeline to situate selected project in time. I developed this component using <b>Angular2, HTML5, Sass, RxJs</b> ... and many others. Don't hesitate to leave me a message in case you need some more detail.</p>
+</section>
+<app-timeline [start]="_start" [end]="_end" [focus]="_selectedProject" [isInViewport]="_isInViewport"></app-timeline>
+<div id="history-viewer" #historyviewer>
+    <app-projectlist [projects]="_projects" (onSelection)="selectProject($event)"></app-projectlist>
+</div>
+<section>
+<p>As you can see the information here is quite dense. I'm not quite happy yet with the presentation but this will do for the time being. I will probably make this part evolve as new ideas arise. Again, don't hesitate to contact me if you have any suggestion !</p>
+</section>

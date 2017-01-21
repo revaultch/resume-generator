@@ -1,0 +1,92 @@
+@import '../../../scss/colors';
+@import '../../../scss/fonts';
+
+
+div {
+    div {
+        padding-left: 0px;
+        display : flex;
+        flex-direction: row;
+        align-items: stretch;
+        padding-bottom : 20px;
+        div {
+            padding-left: 0px;
+            display:flex;
+            flex-direction : column;
+            width : 60%;
+            font-family : $base-regular-font-family !important;
+
+            h2 {
+                font-size: 1.05em;
+                color : $red-dingue;
+            }
+            div {
+                font-size : 0.85em;
+            }
+            ul {
+                font-size : 0.85em;
+                list-style-type: none;
+                padding-left : 0px;
+                padding-right : 40px;
+                &.skills {
+                    color : $light-blue;
+                    font-size : 1.2em;
+                }
+
+                li {
+                    display: inline !important;
+                    &.odd {
+                        
+                     font-family:  $base-thin-font-family !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+  @media screen and (max-width: 1000px) {
+      div {
+          div {
+              padding-bottom : 10px;
+              div {
+                  h2 {
+                      font-size : 0.9em;
+                  }
+                  div {
+                      font-size : 0.7em;
+                  }
+                  ul {
+                      font-size : 0.7em;
+
+                      &.skills {
+                        font-size : 0.8em;
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+    @media screen and (max-width: 600px) {
+      div {
+          div {
+                padding-bottom : 5px;
+              div {
+                  h2 {
+                      font-size : 0.6em;
+                  }
+                  div {
+                      font-size : 0.5em;
+                  }
+                  ul {
+                      font-size : 0.5em;
+
+                      &.skills {
+                        font-size : 0.4em;
+                      }
+                  }
+              }
+          }
+      }
+  }

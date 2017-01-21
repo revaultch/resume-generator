@@ -20,10 +20,19 @@ export class SkillsService {
                 skills.push(skill);
             }, (err) => { throw err; },
             () => {
+                skills = skills.sort(this.compareSkills).slice(0, 19);
                 observer.next(skills);
                 observer.complete();
             });
         });
+    }
+
+    compareSkills(s1: Skill, s2: Skill) {
+        if (s2.lastTimeSeen !== s1.lastTimeSeen) {
+            return s2.lastTimeSeen - s1.lastTimeSeen;
+        } else {
+            return s2.daysDone - s1.daysDone;
+        }
     }
 
 

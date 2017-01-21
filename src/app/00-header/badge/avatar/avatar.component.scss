@@ -1,0 +1,10 @@
+       .avatar {
+          position : absolute;
+          left : 7% !important;
+          top : 20% !important;
+          width : 30% !important;
+          height : 60%;
+          > img {
+              border-radius : 5px !important;
+          }
+        }

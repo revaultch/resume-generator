@@ -1,0 +1,5 @@
+<div class="detailbox" #detailbox>
+    <div class="logo-container" [ngClass]="{'isInViewport' : _isInViewport}"><div class="logo {{logo}}"></div></div>
+    <span class="title">{{title}}</span>
+    <span class="text"><ng-content></ng-content></span>
+</div>

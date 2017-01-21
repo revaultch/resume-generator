@@ -1,62 +1,77 @@
-import { Component, AfterViewInit, Inject } from '@angular/core';
-import { Timeline, DataSet } from 'vis';
+import { Component, OnInit, AfterViewInit, Inject, ViewChild, ViewContainerRef, ElementRef } from '@angular/core';
 import { HistoryService } from './history.service';
-import {Project} from '../common/project.model';
+import { Project } from '../common/project.model';
 import { Observable, Observer } from 'rxjs/Rx';
+import { WorkflowEventService } from '../common/workflow/workflowevent.service';
+import { EnterViewportWorkflowEvent, InViewportWorkflowEvent, ExitViewportWorkflowEvent } from '../common/workflow/workflowevent.model';
+import { WorkflowEventReceiver } from '../common/workflow/workfloweventreceiver.model';
 
 @Component({
     selector: 'app-history',
     templateUrl: './history.component.html',
     styleUrls: ['./history.component.scss']
+
 })
-export class HistoryComponent implements AfterViewInit {
-
-    private container: any;
-
-    private project: Project;
-
-    _detailIsVisible: boolean = false;
+export class HistoryComponent implements OnInit, AfterViewInit, WorkflowEventReceiver {
 
 
-    showDetail(properties: any) {
-        this._detailIsVisible = true;
-        this._historyService.getProject(properties.items[0]).subscribe((project) => {
-            this.project = project;
-        });
+    @ViewChild('historyviewer', { read: ViewContainerRef })
+    private _historyViewer: any;
+
+    private _start: Date = new Date(1996, 0, 1);
+    private _end: Date = new Date();
+    private _projects: Array<Project> = new Array<Project>();
+    private _selectedProject: Project;
+
+    private _isInViewport = false;
+
+
+    constructor( @Inject(HistoryService) private _historyService: HistoryService,
+        @Inject(WorkflowEventService) private _workflowEventService) { }
+
+
+    ngOnInit() {
+        // load all projects
+        let tmp = new Array<Project>();
+        this._historyService.getProjects().subscribe((project) => {
+            tmp.push(project);
+        },
+            (err) => {
+                throw err;
+            },
+            () => {
+                this._projects = tmp.reverse();
+            });
+
 
     }
 
-    constructor(@Inject(HistoryService) private _historyService: HistoryService) {}
-
     ngAfterViewInit() {
-        let thiz = this;
-        thiz.container = document.getElementById('timeline');
-        let maxDate = new Date();
-        maxDate.setTime(maxDate.getTime() + 100 *(24*60*60*1000))
-        let timelineOptions = {height : '600px', clickToUse : false, min : '1995-06-01', max : maxDate};
-
-        let items = new DataSet([
-        ]);
-
-        this._historyService.getProjects().subscribe((project) => {
+        this._workflowEventService.getWorkflowEvents(this).subscribe();
+    }
 
 
-            items.add({id : project.id, content : project.name, start : project.estimatedStart, end: project.estimatedEnd});
+
+    selectProject(event: any) {
+        this._selectedProject = event.value;
+    }
+
+    handleWorkflowEnter(event: EnterViewportWorkflowEvent) {
+        this._isInViewport = false; // expect to have at least nfapply%
+    }
+
+    handleWorkflowIn(event: InViewportWorkflowEvent) {
+        this._isInViewport = event.coverageInPercent > 20.0;
+    }
 
 
-            // Configuration for the Timeline
+    handleWorkflowExit(event: ExitViewportWorkflowEvent) {
+        this._isInViewport = false; // expect to have at least n%
+    }
 
-            // Create a Timeline
 
-
-        }, (err) => {throw err;},
-        () => {
-            let timeline: Timeline = new Timeline(thiz.container, items, timelineOptions);
-            timeline.setWindow('2015-01-01', '2016-01-01')
-            timeline.on('select', function(props) { thiz.showDetail(props); });
-
-        });
-
+    getElementRef(): ElementRef {
+        return this._historyViewer.element;
     }
 
 

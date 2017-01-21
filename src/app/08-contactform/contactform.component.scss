@@ -1,7 +1,13 @@
 @import '../../scss/colors';
-$darken-violence : darken($violence, 10%);
+@import '../../scss/fonts';
+$lighten-grey : lighten($light-grey, 20%);
+$darken-grey : darken($light-grey, 20%);
 
-
+section {
+    * {
+        text-align : center;
+    }
+}
 
 form[name = "contact-form"] {
     display:flex;
@@ -11,51 +17,79 @@ form[name = "contact-form"] {
     margin-bottom : 40px;
     text-align:center;
     * {
+        font-family: $base-thin-font-family;
+        border-radius: 5px;
         width : 80%;
         margin-top : 10px !important;
         margin-bottom : 10px !important;
         margin-left: auto;
         margin-right : auto;
-        border : 1px solid $darken-violence;
-        background-color : $violence-light !important;
-        color : $white !important;
-        font-size : 1.2em;
-        padding : 10px;
+        border : 1px solid transparent;
+        background-color : $lighten-grey !important;
+        color : $dark-blue !important;
+        font-size : 1.0em;
+        padding : 5px;
+        padding-top : 10px;
+        padding-bottom : 10px;
+        outline: none;
         
             &::-webkit-input-placeholder {
-                color: $violence
+                color: $darken-grey;
             }
 
             &:-moz-placeholder { /* Firefox 18- */
-                color: $violence
+                color: $darken-grey;
             }
 
             &::-moz-placeholder {  /* Firefox 19+ */
-                color: $violence;
+                color: $darken-grey;
             }
 
             &:-ms-input-placeholder {  
-                color: $violence;
+                color: $darken-grey;
             }
+        &:focus {
+            border : 1px  solid $darken-grey;
+        }
+        &.error {
+            border : 1px solid $red-dingue;
+        }
 
     }
     input {
         &[type = "submit"] {
+            font-size: 1.5em;
             height : 4.0em;
-            background-color : $orange !important;
+            background-color : $dark-blue !important;
             color : $white !important;
             width : 60% !important;
             cursor : pointer;
             margin-top : 40px !important;
             margin-bottom : 40p !important;
             &:hover {
-                background-color : $white !important;
-                color : $orange !important;
+                background-color : $light-blue !important;
+                color : $white !important;
+            }
+            &:disabled {
+                background-color : $darken-grey  !important;
+                color :  $lighten-grey !important;
             }
         }
     }
     textarea {
         height : 400px;
+        resize : none;
+    }
+
+    .message-sent {
+        background-color : $light-grey !important;
+        font-size : 2.0em;
+    }
+
+    .send-error {
+        background-color : $light-grey !important;
+        color : $red-dingue !important;
+        font-size : 2.0em;
     }
 
 }

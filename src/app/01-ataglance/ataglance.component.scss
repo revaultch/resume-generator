@@ -1,33 +1,53 @@
-.textwicon {
-    padding-top:40px;
-    padding-bottom:40px;
-    display:flex;
-    background-image: url(/assets/images/ataglance/default.png) ;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    &.left {
-        .title {
-            text-align: left;
-        }
-        flex-direction: column;
-        padding-left : 120px;
-        background-position-x:left;
-    }
-    &.right {
-        .title {
-            text-align: right;
-        }
-        flex-direction: column;
-        padding-right : 120px;
-        background-position-x:right;
-    }
-    .text {
-        text-align:justify;
-        width : 80%;
-        font-size: 0.8em;
-    }
-}
-
 h2 {
     text-align:center;
+}
+
+.detail-box-line {
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    padding-top : 20px;
+    padding-bottom : 20px;
+    padding-left : 0px;
+    padding-right : 0px;
+    margin : 0px;
+    align-items: stretch;
+    width : 100%;
+    app-detailbox {
+        width : 100%;
+    }
+    &:nth-child(3) {
+        app-detailbox:nth-child(1) {
+            padding-right : 40px;
+        }
+        app-detailbox:nth-child(3) {
+            padding-left : 40px;
+        }
+    }
+
+    &:nth-child(4) {
+        app-detailbox:nth-child(1) {
+            padding-right : 20px;
+        }
+        app-detailbox:nth-child(2) {
+            padding-left : 20px;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .detail-box-line {
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-top : 0px;
+        padding-bottom : 0px;
+        app-detailbox {
+            padding-left : 0px !important;
+            padding-right : 0px !important;
+        }
+    }
 }

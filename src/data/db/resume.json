@@ -1048,6 +1048,7 @@
                                     "Spring Boot",
                                     "Jira",
                                     "HTML5",
+                                    "CSS3",
                                     "AngularJS",
                                     "Bootstrap",
                                     "Spring Integration",
@@ -1093,6 +1094,8 @@
                                     "Spring Boot",
                                     "HTML5",
                                     "AngularJS",
+                                    "CSS3",
+                                    "Sass",
                                     "Bootstrap",
                                     "Maven",
                                     "Drools",
@@ -1131,6 +1134,7 @@
                                     "Java",
                                     "Spring",
                                     "HTML5",
+                                    "CSS3",
                                     "AngularJS",
                                     "Bootstrap",
                                     "Maven",
@@ -1140,7 +1144,8 @@
                                     "Git",
                                     "Couchbase",
                                     "PostgreSQL",
-                                    "Swagger"
+                                    "Swagger",
+                                    "Sass"
                                 ],
                                 "business": [
                                     "Startup",
@@ -1177,7 +1182,8 @@
                                     "Rest",
                                     "JUnit",
                                     "Git",
-                                    "Swagger"
+                                    "Swagger",
+                                    "Sass"
                                 ],
                                 "business": [
                                     "Insurance"

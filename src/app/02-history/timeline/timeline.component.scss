@@ -1,0 +1,117 @@
+@import '../../../scss/colors';
+@import '../../../scss/fonts';
+
+
+.timeline {
+    padding : 0px !important;
+    margin : 0px !important;
+    display : none;
+    position : fixed;
+    height : auto;
+    width : 2px;
+    background-color: $light-grey;
+    z-index : 1;
+    top: 5%;
+    left : 7%;
+    bottom: 5% !important;
+
+    &.inViewport {
+        display:block;
+    }
+    
+    > .focus {
+        position: absolute;
+        background-color : $red-dingue;
+        width : 4px;
+        height : 10%;
+        left : -1px;
+        top : 10%;
+        z-index : 10;
+        border-radius : 2px;
+        transition: top 0.5s ease-in-out;
+        -moz-transition: top 0.5s ease-in-out; /* Firefox 4 */
+        -webkit-transition: top 0.5s ease-in-out; /* Safari and Chrome */
+        -o-transition: top 0.5s ease-in-out; /* Opera */
+        -ms-transition: top 0.5s ease-in-out; /* Explorer 10 */
+        transition: height 0.5s ease-in-out;
+        -moz-transition: height 0.5s ease-in-out; /* Firefox 4 */
+        -webkit-transition: height 0.5s ease-in-out; /* Safari and Chrome */
+        -o-transition: height 0.5s ease-in-out; /* Opera */
+        -ms-transition: height 0.5s ease-in-out; /* Explorer 10 */
+    }
+    > .yearmark {
+        position: absolute;
+        z-index: 11;
+        font-family: $base-thin-font-family;
+        font-size: 0.8em;
+        padding: 0px !important;
+        margin : 0px !important;
+        line-height : 100% !important;
+        left : -50px;
+        display : flex;
+        flex-direction : row;
+        > span {
+            padding : 0px !important;
+            margin : 0px !important;
+        }
+        > div {
+            opacity: 0.8;
+            filter: alpha(opacity=80); /* For IE8 and earlier */            
+            position: absolute;
+            left : 48px;
+            padding : 0px;
+            margin : 0px;
+            width: 6px;
+            height: 6px;
+            background: $light-blue;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+            z-index: 12;
+        }
+
+        &.terminal {
+            > span {
+                font-family: $base-regular-font-family;
+            }
+            > div {
+                left : 45px;
+                width: 11px !important;
+                height: 11px !important;
+                background: $dark-blue !important;
+                &:after {
+                    content:"";
+                    position: absolute;
+                    left : 3px;
+                    top : 3px;
+                    width: 5px;
+                    height: 5px;
+                    background: $light-blue;
+                    -moz-border-radius: 50px;
+                    -webkit-border-radius: 50px;
+                    border-radius: 50px;
+                    z-index: 13;
+                }
+
+            }
+            
+        }
+
+
+
+    }
+}
+
+ @media screen and (max-width: 800px) {
+    .timeline {
+        left : 10% !important;
+    }
+
+ }
+
+ @media screen and (max-width: 600px) {
+    .timeline {
+        display : none !important;
+    }
+
+ }

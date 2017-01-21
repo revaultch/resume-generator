@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  // TODO
+  private logos = ['adeya','capital','ikentoo','ilo','lodh','nestle','pictet','tcs','zong','orange','cross','revault'];
 }

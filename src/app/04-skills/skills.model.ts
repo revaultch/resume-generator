@@ -22,6 +22,14 @@ export class Skill {
         return this._daysDone;
     }
 
+    set weeksDone(weeksDone: number) {
+        this._daysDone = weeksDone * 52;
+    }
+
+    get weeksDone(): number {
+        return Math.floor(this._daysDone ? this._daysDone / 52 : 0);
+    }
+
     get linkedInScore(): number {
         return this._linkedInScore;
     }

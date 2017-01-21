@@ -1,7 +1,7 @@
-$darker-blue:#2d4052;
-$dark-blue:#34495e;
-$white:#ffffff;
-$orange:#e67e22;
+
+
+@import '../../../scss/colors';
+
 
 
 .menu-container.header {
@@ -25,11 +25,11 @@ $orange:#e67e22;
         }
 
         .menu-item:hover {
+            bottom : 100%;
             cursor:pointer;
-            background-color : $orange;
+            background-color : $red-dingue;
             height : 60px;
             display: table-cell;
-            vertical-align: bottom;
         }
 
     }
@@ -47,6 +47,7 @@ $orange:#e67e22;
             flex:row;
             padding-left : 10px;
             padding-right : 10px;
+            cursor:pointer;
         }
     }    
 }

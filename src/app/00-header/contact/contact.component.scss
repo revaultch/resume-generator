@@ -1,5 +1,5 @@
-$white : #ffffff;
-$orange:#e67e22;
+
+@import '../../../scss/colors';
 
 .contact.header {
     position: absolute;
@@ -9,20 +9,25 @@ $orange:#e67e22;
     .buttons {
         display:flex;
         flex-direction: column;
-    }
-    .icon {
-        margin-bottom:10px;
-        font-size: 60px;
-        color : $white;
-        border : solid 3px transparent;
-        height:66px;
-    }
 
-    .icon:hover {
-        cursor:pointer;
-        color:$orange;
-        font-size : 66px;
-        border : 0;
+        .icon {
+            margin-bottom:10px;
+            font-size: 60px;
+            color : $white;
+            border : solid 3px transparent;
+            height:66px;
+            z-index : 25;
+            a {
+                text-decoration: none !important;
+                color : $white !important;
+            }
+            &:hover {
+                cursor : pointer;
+                font-size : 66px;
+                border : 0;                
+            }
+        }
+
     }
 
 }
@@ -44,4 +49,29 @@ $orange:#e67e22;
     }
 
 
+}
+
+
+ @media screen and (max-width: 800px) {
+
+     .contact.header {
+         position:absolute;
+         width : 100% !important;
+         top : 400px;
+         left : 0px;
+         margin : 0px;
+         padding : 0px;
+         text-align : center;
+         .buttons {
+             display : flex;
+             width : 100%;
+             flex-direction : row;
+             align-items : center !important;
+             justify-content: center;
+             .icon {
+                 margin : 0px;
+             }
+         }
+     }
+     
 }

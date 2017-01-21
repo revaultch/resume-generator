@@ -1,4 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import '../../../ext/skype/skype-uri.js';
+declare var Skype: any;
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +10,14 @@ import { Component, Input } from '@angular/core';
 })
 export class ContactComponent {
 
+
   @Input() mode;
+
+
+  skype() {
+    Skype.tryAnalyzeSkypeUri('chat', '0');
+  }
+
+
 
 }

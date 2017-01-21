@@ -4,7 +4,7 @@ export class Experience {
 
 
     public static fromJson(experience: any) {
-        let experienceStartDate: Date = new Date(experience.start.year, experience.start.month - 1) // 0 based month;
+        let experienceStartDate: Date = new Date(experience.start.year, experience.start.month - 1)// 0 based month;
         let experienceEndDate: Date;
         if (experience.end) {
             experienceEndDate = new Date(experience.end.year, experience.end.month, 0) ; // day 0 = last day of previous month
@@ -24,22 +24,11 @@ export class Experience {
             let projectStartOffsetInMs = cumulatedOffsetInDays * 24 * 60 * 60 * 1000;
             projectStartDate.setTime(experienceStartDate.getTime() + projectStartOffsetInMs) ;
 
-
-
-            let project = Project.fromJson(totalExperienceDurationInDays,
+            let project = Project.fromJson(experience, totalExperienceDurationInDays,
             projectStartDate,
             p);
 
             projects.push(project);
-
-/*
-            console.log("project name       : " + project.name);
-            console.log("xp start date      : " + experienceStartDate);
-            console.log("xp end   date      : " + experienceEndDate);
-            console.log("total project days : " + project.durationInDays);
-            console.log("project start date : " + project.estimatedStart);
-            console.log("project end   date : " + project.estimatedEnd);
-            console.log("project duration   : " + project.durationInDays);*/
 
             cumulatedOffsetInDays += project.durationInDays;
         }

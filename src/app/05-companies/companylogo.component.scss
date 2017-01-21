@@ -1,0 +1,27 @@
+.logo {
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    filter: grayscale(100%);
+    transition-timing-function: ease-in-out;
+    -webkit-transition: transform 0.225s;
+    -moz-transition: transform 0.225s;
+    -o-transition: transform 0.225s;
+    transition: transform 0.225s;            
+
+    &.nofilter {
+        -webkit-filter: none;
+        filter: none;
+        transform: scale(1.15);        
+    }
+}
+
+ @media screen and (max-width: 600px) {
+    .logo {
+        img {
+            width : 64px;
+            height : 64px;
+        }
+    }
+
+ }

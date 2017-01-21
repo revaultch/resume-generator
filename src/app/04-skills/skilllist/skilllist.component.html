@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let skill of skills; trackBy:skillTrackByFn">
+        <div>
+            <div>{{skill.name}}</div>
+            <div><span>{{skill.weeksDone}}</span></div>
+            <div><span>{{skill.nbOfProjects}}</span></div>
+            <div><span>{{skill.linkedInScore}}</span></div>
+            <div>{{skill.lastTimeSeen == 0 ? 'currently in use' : 'used ' + skill.lastTimeSeen * -1 + ' days ago'}}</div>
+        </div>
+    </li>
+</ul>
+<div class="nocontent" [hidden]="skills.length > 0">Sorry. There's no content to be displayed.</div>

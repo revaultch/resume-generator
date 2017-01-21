@@ -1,70 +1,75 @@
-
-$darker-blue:darken( #3a73bf, 20%);
-$white : #ffffff;
-$border-grey: #dddddd;
-
-
-.treemap {
-  position:relative;
-  border : solid 1px $border-grey;
-  height:400px;
-  width:100%;
-  margin-bottom : 20px;
-
-  /deep/ .node {
-    position: absolute !important;
-    font-size: 80% !important;
-    line-height: 150%;
-    overflow: hidden;
-    text-indent: 1%;
-    transition: background 1s;
-    transition: color 0.5s;
-    text-align: center !important;
-    &:hover {
-      background: grey !important;
-      color: white;
-    }
-  }
-
-}
-
-.controls {
-  justify-content: center;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-
-
-  ui-knob {
-    padding-left : 10px;
-    padding-right : 10px;
-  }
-}
+@import '../../scss/colors';
+@import '../../scss/fonts';
 
 .skillviewer {
-  width:100%;
-  background-color: $white;
-  border : solid 1px $border-grey;
-  padding : 20px;
-  margin-top : 40px;
-  margin-bottom : 80px;
-}
-
-
-#wordcloud {
-  position:relative;
-  border : solid 1px $border-grey;
-  height : 500px;
-  width:100%;
-  margin-bottom : 20px;
-
-  /deep/ text {
-    &:hover {
-      cursor:pointer;
+  padding-top : 40px;
+  padding-bottom: 40px;
+  > .presets {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    > span {
+      width: 30%;
     }
+    > select {
+      margin-bottom : 20px;
+      height : 40px;
+      width: 45%;
+      color : $dark-blue;
+      font-family:$base-thin-font-family ;
+      font-size : 0.9em;
+      border : none;
+      border-radius: 2px;
+    }
+  }
+  > .controls {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+      text-align: center;
+      > span:nth-child(1) {
+        width : 30%;
+        padding : 0px;
+        margin : 0px;
+      }
+      > .knob {
+        width : 15%;
+        display : flex;
+        flex-direction: column;
+        > span {
+          text-align:center;
+          font-family:$base-thin-font-family ;
+          font-size : 0.8em;
+        }
+      }
+      > span:nth-child(5) {
+        display: flex;
+        align-items: stretch;
+        flex-direction : column-reverse;
+        flex:auto;
+        > div {
+          text-align:center;
+          font-family:$base-thin-font-family ;
+          font-size : 0.8em;
+        }
+      }
   }
 }
 
+ @media screen and (max-width: 850px) {
+   .skillviewer {
+     .controls {
+       .knob {
+         span {
+           font-size : 0.6em;
+         }
+       }
+       span:nth-child(5) {
+         div {
+           font-size : 0.6em;
+         }
+       }
+     }
+   }
+ }

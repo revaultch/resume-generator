@@ -14,10 +14,14 @@ html {
         font-family: $paragraph-font-family;
         text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
         text-rendering: optimizeLegibility !important;
-        -webkit-font-smoothing: antialiased !important;
+        -webkit-font-smoothing: subpixel-antialiased;
         margin : 0px;
-        letter-spacing: 1px;
-        line-height: 150%;
+        padding : 0px;
+        letter-spacing: 5%;
+        height : 100%;
+        min-width : 360px;
+        width : 100%;
+//        line-height: 150%;
     }    
 }
 
@@ -28,6 +32,7 @@ h1, h2, h3, h4 {
 
 .icon {
     font-family: $icon-font-family !important;
+    -webkit-font-smoothing: antialiased !important;
 }
 
 .section {
@@ -37,42 +42,63 @@ h1, h2, h3, h4 {
     padding-top:40px;
 }
 
+.hidden {
+    display : none;
+}
+
+section {
+    padding-top : 60px;
+    padding-bottom : 60px;
+}
+
 .section-w-padding {
     box-sizing: border-box;
     padding-left:10%;
     padding-right:10%;
     padding-bottom : 100px;
+    h1 {
+        padding-top:40px;
+        padding-bottom : 40px;
+    }
     @extend .section;
 }
 
-.paragraph {
-    font-size:0.9em;
+p {
+    font-size:1.3em;
     padding-top:20px;
-    padding-bottom:10px;
+    padding-bottom:20px;
     text-align:justify;
+    letter-spacing: 5%;
+    line-height: 150%;
 }
 
 
 
 app-header {
-    background-color:$dark-blue;
-    @extend .section;
+    padding : 0px;
+    margin : 0px;
+    width : 100%;
 }
+
+
+
+
 
 
 app-ataglance {
     background-color:$light-grey;
     @extend .section-w-padding;
+    color : $dark-blue;
 
     h1 {
-        text-align: left;
-        color : $orange;
+        text-align: center;
+        color : $dark-blue;
     }
 }
 
 app-history {
     h1 {
-        text-align : right;
+        text-align : center;
         color : $red-dingue;
     }
     @extend .section-w-padding;
@@ -81,8 +107,8 @@ app-history {
 app-skills {
     background-color:$light-grey;
     h1 {
-        color : $orange;
-        text-align : left;
+        color : $light-blue;
+        text-align : center;
     }
     @extend .section-w-padding;
 }
@@ -93,7 +119,7 @@ app-companies {
     color: $light-grey;
     h1 {
         color : $white;
-        text-align : left;
+        text-align : center;
     }
     @extend .section-w-padding;
 }
@@ -106,18 +132,18 @@ app-rates {
     color : $black;
     h1 {
         text-align : center;
-        color : $violence;
+        color : $orange;
     }
     @extend .section-w-padding;
 }
 
 
 app-contactform {
-    background-color:$violence;
-    color: $light-grey;
+    background-color:$light-grey;
+    color: $dark-blue;
     h1 {
-        color : $white;
-        text-align : left;
+        color : $light-blue;
+        text-align : center;
     }
     @extend .section-w-padding;
 }
@@ -128,3 +154,11 @@ app-footer {
     color: $white;
     @extend .section;
 }
+
+
+ @media screen and (max-width: 480px) {
+     p {
+        font-size:1.0em;
+         
+     }
+ }

@@ -1,57 +1,71 @@
 import {
     Component, ComponentRef, ViewContainerRef, ComponentFactoryResolver,
-    ViewChild, OnInit, OnDestroy, Input
+    ViewChild, OnInit, OnDestroy, Input, AfterViewInit, Inject, ElementRef
 } from '@angular/core';
 
-import { LogoStripComponent } from './logo/logo-strip.component';
+import { WorkflowEventService } from '../common/workflow/workflowevent.service';
+import { EnterViewportWorkflowEvent, InViewportWorkflowEvent, ExitViewportWorkflowEvent } from '../common/workflow/workflowevent.model';
+import { WorkflowEventReceiver } from '../common/workflow/workfloweventreceiver.model';
 
 @Component({
     selector: 'app-companies',
     templateUrl: './companies.component.html',
     styleUrls: ['./companies.component.scss']
 })
-export class CompaniesComponent implements OnInit, OnDestroy {
+export class CompaniesComponent implements AfterViewInit, WorkflowEventReceiver {
 
-    @Input() names;
+    @Input() names: Array<string>;
 
-    @ViewChild('logoStripPlaceholder', { read: ViewContainerRef })
-    private dynamicTarget: any;
+    @ViewChild('logoPanel', { read: ViewContainerRef })
+    private logoPanel: any;
 
-    private componentReference: ComponentRef<LogoStripComponent>;
+    private _highlightIndex = [];
 
-    constructor(private resolver: ComponentFactoryResolver) {
+    private _effectDone = false;
+
+    constructor(private resolver: ComponentFactoryResolver, @Inject(WorkflowEventService) private _workflowEventService,
+    private _el: ElementRef) {
     }
 
-    ngOnInit() {
-        this.createStrip();
+
+    ngAfterViewInit() {
+       this._workflowEventService.getWorkflowEvents(this).subscribe();
     }
 
-    createStrip() {
-        let componentFactory = this.resolver.resolveComponentFactory(LogoStripComponent);
-        let strip = this.dynamicTarget.createComponent(componentFactory);
+    triggerEffect() {
         let thiz = this;
-        strip.instance.logoNames = this.names;
-        strip.instance.scrollFinished.subscribe((data) => {
-            thiz.reset();
-
-        });
-        this.componentReference = strip;
-    }
-
-    ngOnDestroy() {
-        this.destroyStrip();
-    }
-
-    reset() {
-        this.destroyStrip();
-        this.createStrip();
-    }
-
-    destroyStrip() {
-        if (this.componentReference) {
-            this.componentReference.destroy();
+        for (let i = 0 ; i < 13 ; i++) {
+            window.setTimeout( function() {
+                thiz._highlightIndex[i] = true;
+                window.setTimeout( function() {
+                    thiz._highlightIndex[i] = false;
+                }, 1000);
+            }, 100 * i);
         }
     }
+
+    handleWorkflowEnter(event: EnterViewportWorkflowEvent) {
+    }
+
+    handleWorkflowIn(event: InViewportWorkflowEvent) {
+        if (event.middlePositionInPercent < 55 && !this._effectDone) {
+            this.triggerEffect();
+            this._effectDone = true;
+        }
+    }
+
+
+    handleWorkflowExit(event: ExitViewportWorkflowEvent) {
+        this._effectDone = false;
+    }
+
+
+    getElementRef(): ElementRef {
+        return this.logoPanel.element;
+    }
+
+
+
 
 
 }

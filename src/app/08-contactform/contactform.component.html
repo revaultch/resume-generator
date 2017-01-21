@@ -1,30 +1,25 @@
-<h1>Contact</h1>
+<h1>CONTACT</h1>
 
-<div class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
-    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-    nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-    numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-    nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel
-    eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-    quo voluptas nulla pariatur?</div>
+<section>
+<p>Here's my contact form. I hope you enjoyed my website experience.</p>
+<p>If it's the case and you think we can work together do not hesitate to leave me a note, I'll get back to you ASAP !</p>
+</section>
 
+<form novalidate name="contact-form" [formGroup]="data" (ngSubmit)="onSubmit(data)">
+    <input [ngClass]="{'error' : !data.controls.name.valid}" type="text" placeholder="Name" formControlName="name">
+    <input [ngClass]="{'error' : !data.controls.company.valid}" type="text" placeholder="Company" formControlName="company" >
+    <input [ngClass]="{'error' : !data.controls.email.valid}" type="text" placeholder="email" formControlName="email">
+    <textarea [ngClass]="{'error' : !data.controls.message.valid}" placeholder="Dear Sir ..." formControlName="message"></textarea>
 
-<form name="contact-form" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="Name" name="name" [(ngModel)] = "data.name">
-    <input type="text" placeholder="Company" name="company" [(ngModel)] = "data.company">
-    <input type="text" placeholder="email" name="email" [(ngModel)] = "data.email" validateEmail>
-    <textarea placeholder="Dear Sir ..." name="description" [(ngModel)] = "data.description"></textarea>
-    <input [hidden]="done" type="submit" value="Pay me a coffee !">
+    <div class="message-sent" *ngIf="_formSent">
+        Message was sent ! Thank you for your time.
+    </div>
+
+    <div class="send-error" *ngIf="_submitFailed">
+        Sorry, something went wrong while sending form. Please try again.
+    </div>
+
+    <input [hidden]="_formSent" type="submit" [disabled]="data.invalid" value="Send message">
 </form>
 
 
-
-<div class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
-    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-    nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-    numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-    nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel
-    eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-    quo voluptas nulla pariatur?</div>

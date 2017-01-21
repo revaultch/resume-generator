@@ -1,0 +1,33 @@
+
+@import '../../scss/colors';
+
+#skylineparent {
+    position: relative;
+    width : 100%;
+    height : 0px;
+    top : 0px;
+    padding: 0px;
+    margin : 0px;
+    padding-bottom : 60px;
+    #skyline {
+        position : absolute;
+        height : 83px;
+        top : -50px;
+        left : 0px;
+        right : 0px;
+        background : url(/assets/images/footer/bg_1024_skyline.png);
+        background-repeat: repeat-x;
+    }
+}
+
+.copyright {
+    font-size : 0.6em;
+    text-align:center;
+}
+
+/deep/ .icon {
+    a {
+        text-decoration: none !important;
+        color : $white !important;
+    }
+}

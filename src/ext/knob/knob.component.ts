@@ -97,7 +97,6 @@ export class KnobComponent implements OnInit {
    */
   ngOnInit() {
     this.inDrag = false;
-    console.log("options"  + JSON.stringify( this.options));
     this.options = Object.assign(this.defaultOptions, this.options);
     this.draw();
   }
@@ -112,7 +111,7 @@ export class KnobComponent implements OnInit {
       this.draw();
     }
 
-    if (this.defaultOptions != null && this.options != null && changes.value.currentValue != null && changes.value.previousValue != null && changes.value.currentValue !== changes.value.previousValue) {
+    if (this.defaultOptions != null && this.options != null && changes.value && changes.value.currentValue != null && changes.value.previousValue != null && changes.value.currentValue !== changes.value.previousValue) {
       this.setValue(changes.value.currentValue);
     }
   }
@@ -141,7 +140,6 @@ export class KnobComponent implements OnInit {
    *   Create the arc
    */
   createArc(innerRadius, outerRadius, startAngle?, endAngle?, cornerRadius?) {
-    console.log('d3', d3);
     var arc = d3.svg.arc()
       .innerRadius(innerRadius)
       .outerRadius(outerRadius)
@@ -368,8 +366,6 @@ export class KnobComponent implements OnInit {
     d3.select(this.element).select("svg").remove();
     var that = this;
 
-    console.log(d3.select(this.element));
-
     that.createArcs();
 
     var dragBehavior = d3.behavior.drag()
@@ -449,7 +445,6 @@ export class KnobComponent implements OnInit {
    *   Set a value
    */
   setValue(newValue) {
-    console.log('setval');
     if ((!this.inDrag) && this.value >= this.options.min && this.value <= this.options.max) {
       var radians = this.valueToRadians(newValue, this.options.max, this.options.endAngle, this.options.startAngle, this.options.min);
       this.value = Math.round(((~~(((newValue < 0) ? -0.5 : 0.5) + (newValue / this.options.step))) * this.options.step) * 100) / 100;

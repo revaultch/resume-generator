@@ -1,114 +1,42 @@
 @import '../../scss/colors';
+@import '../../scss/fonts';
 
+#history-viewer {
+    display: flex;
+    flex-direction : row;
+    align-items: stretch;    
+    padding-top : 40px;
+    padding-bottom : 40px;
+    app-timeline {
+        width : 10%;
+    }
+}
 
-/deep/ #history_container {
-    position:relative;
-    height : 600px;
+#laceparent {
+    position: relative;
     width : 100%;
-    margin-top : 40px;
-    margin-bottom : 40px;
-
-    #timeline {
-        position:absolute;
-        width : 100%;
-        bottom: 0px;
-        height : 100%;
-
-        .vis-timeline {
-            background-color : $white;
-            width:100%;
-            height:100%;
-            z-index : 1;
-        }
-        
-
+    height : 0px;
+    top : 0px;
+    padding: 0px;
+    margin : 0px;
+    #lace1 {
+        position : absolute;
+        height : 208px;
+        width : 58px;
+        top : -56px;
+        right : -80px;
+        background : url(/assets/images/lacet1.png);
+        background-size: 58px 208px;
+        background-repeat: no-repeat;
     }
-
-  /deep/  #detail {
-        position:absolute;
-        display : flex;
-        flex-direction: column;
-        left : 0px;
-        right : 0px;
-        margin:0px;
-        padding-left : 20px;
-        padding-top : 20px;
-        bottom : 0px;
-        height: 0px;
-        width: 0px;    
-        z-index : 0;
-        background-color : #ffffff;
-        overflow:hidden;
-
-
-        transition: height 0.3s ease-in-out;
-        -moz-transition: height 0.3s ease-in-out; /* Firefox 4 */
-        -webkit-transition: height 0.3s ease-in-out; /* Safari and Chrome */
-        -o-transition: height 0.3s ease-in-out; /* Opera */
-        -ms-transition: height 0.3s ease-in-out; /* Explorer 10 */
-
-        ul {
-            list-style-type: none !important;
-            padding-left : 10px;
-        }
-
-        .skills {
-            display:flex;
-            flex-direction: row;
-            div {
-                width : 50%;
-                li {
-                    display: inline-block;
-                    box-sizing: border-box;
-                    background-color : $light-grey;
-                    color : $light-blue;
-                    margin-right : 10px;
-                    margin-bottom : 10px;
-                    padding : 10px 10px 10px 10px;
-                    border-radius : 2px;
-                }
-            }
-        }
-
-    }
-
-
-    &.detailmode {
-        #detail {
-            display: flex;
-            height: 600px;
-            width:100%;
-            z-index:3;
-            overflow:auto;
-            border : 1px solid $border-grey;
-        }
-    }
-
-    h2, h3 {
-        color : $orange;
-    }
-
 }
 
-
-
-/deep/ .vis-item {
-     background-color: $light-grey !important;
-     border-color: $light-blue;
-     color : $black;
-     &.vis-selected {
-         background-color : $orange !important;
-         border-color: $orange;
-         color : $dark-blue;
-     }
-     
-     &:hover {
-//        display: block !important;
-//        width: auto !important;
-        z-index : 10;
-        cursor:pointer;
-     }
-
+section {
+    z-index : 10;
 }
 
-
+ @media screen and (max-width: 800px) {
+     #laceparent {
+         display : none;
+     }
+ }
