@@ -28,6 +28,10 @@ import { KnobComponent } from '../ext/knob/knob.component';
 import { DataService } from './common/data.service';
 import { WindowRef } from './common/window/windowref.service';
 import { WorkflowEventService } from './common/workflow/workflowevent.service';
+import { LoadedDecoratorDirective } from './common/directives/loaded-decorator.directive';
+
+import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
+
 
 @NgModule({
   declarations: [
@@ -50,7 +54,9 @@ import { WorkflowEventService } from './common/workflow/workflowevent.service';
     ContactComponent,
     RatesComponent,
     FooterComponent,
-    KnobComponent
+    KnobComponent,
+    RateBoxComponent,
+    LoadedDecoratorDirective
   ],
   entryComponents: [], // used for dynamically allocated components
   imports: [

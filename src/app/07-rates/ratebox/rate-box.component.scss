@@ -1,0 +1,128 @@
+@import '../../../scss/colors';
+@import '../../../scss/fonts';
+$box-grey:#f4f4f4;
+
+.rating-box {
+    width : 100%;
+    height : 100% !important;
+    flex : 1;
+    font-family : $base-regular-font-family;
+    font-size : 0.8em;
+    display : flex;
+    flex-direction: column;
+    align-items:stretch;    
+
+    &:hover {
+        cursor : pointer;
+        transform: scale(1.01);
+        > .top {
+            background-color : $sun-flower;
+            border : 1px solid $sun-flower;
+        }
+        > .bottom {
+            border : 1px solid $sun-flower;
+        }
+    }
+    > .top {
+        position:relative;
+        display : flex;
+        flex-direction: column;
+        background-color : $box-grey;
+        padding-top : 20px;
+        padding-bottom : 20px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border : 1px solid $box-grey;
+        align-items: stretch;
+        flex : auto;
+        .star {
+            position:absolute;
+            width : 33px;
+            height : 27px;
+            bottom : -19px;
+            background : url(/borja/assets/images/rates/star.png) no-repeat center;
+            background-size: 33px 27px;
+            background-repeat : no-repeat;
+            align-self : center;
+        }
+        .title {
+            text-align: center;
+            font-size : 1.5em;
+            text-transform: uppercase;
+            padding-bottom : 20px;
+            font-family : $base-regular-font-family;
+        }
+        .startingat {
+            text-align: center;
+            padding-top : 20px;
+            padding-bottom : 10px;
+        }
+        .price {
+            text-align: center;
+            padding-top : 10px;
+            padding-bottom : 20px;
+            color : $red-dingue;
+            .currency {
+                font-size : 0.7em;
+            }
+            .value {
+                font-size : 3.8em;
+                font-family: $base-title-2-family;
+            }
+            .period {
+                font-size : 0.7em;
+            }            
+        }
+        .good-for {
+            text-align: center;
+            padding-left : 20px;
+            padding-right : 20px;
+       }
+    }
+    > .bottom {
+        flex : auto;
+        display : flex;
+        flex-direction : column;
+        text-align: center;
+        background-color : $white;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border : 1px solid $box-grey;
+        border-top: 1px transparent;
+        padding-top : 10px;
+        align-items: stretch;
+        > ul {
+            flex : auto;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            padding : 0px;
+            align-self: stretch;
+            min-height : 150px;
+            > li {
+                padding-top : 10px;
+                padding-bottom : 10px;
+                text-align: center;
+            }
+        }
+        button {
+            outline : none;
+            border : 1px solid $sun-flower;
+            border-radius : 5px;
+            background-color: $sun-flower;
+            color : $white;
+            width : 50%;
+            font-family : $base-thin-font-family;
+            font-size: 1.5em;
+            align-self: center;
+            margin-top : auto;
+            margin-bottom : 20px;
+            height : 60px;
+            &:hover {
+                cursor : pointer;
+                background-color: $white;
+                color : $sun-flower;
+            }
+        }
+    }
+}

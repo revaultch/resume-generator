@@ -5,16 +5,16 @@
   font-family: 'Lato Thin';
   font-style: normal;
   font-weight: 100;
-  src: url('/assets/fonts/Lato-Thin.woff2') format('woff2'), 
-       url('/assets/fonts/Lato-Thin.woff') format('woff'); 
+  src: url('/borja/assets/fonts/Lato-Thin.woff2') format('woff2'), 
+       url('/borja/assets/fonts/Lato-Thin.woff') format('woff'); 
 }
 
 @font-face {
   font-family: 'Lato Regular';
   font-style: normal;
   font-weight: 200;
-  src: url('/assets/fonts/Lato-Regular.woff2') format('woff2'), 
-       url('/assets/fonts/Lato-Regular.woff') format('woff');
+  src: url('/borja/assets/fonts/Lato-Regular.woff2') format('woff2'), 
+       url('/borja/assets/fonts/Lato-Regular.woff') format('woff');
 }
 
 
@@ -22,8 +22,8 @@
   font-family: 'Lato Heavy';
   font-style: bold;
   font-weight: bolder;
-  src: url('/assets/fonts/Lato-Heavy.woff2') format('woff2'), 
-       url('/assets/fonts/Lato-Heavy.woff') format('woff');
+  src: url('/borja/assets/fonts/Lato-Heavy.woff2') format('woff2'), 
+       url('/borja/assets/fonts/Lato-Heavy.woff') format('woff');
 }
 
 $base-title-2-family : Lato Heavy, sans-serif;

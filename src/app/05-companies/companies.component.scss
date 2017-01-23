@@ -2,6 +2,13 @@
 @import '../../scss/colors';
 
 
+ul {
+    list-style-type: none;
+    li {
+        line-height : 150%;
+    }
+}
+
 
 /deep/ .marqueecontainer {
     position:relative;

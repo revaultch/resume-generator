@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./avatar.component.scss']
 })
 export class AvatarComponent {
-    private imgLeft: string = '../../assets/images/avatar/a_-1.png';
-    private imgCenter: string = '../../assets/images/avatar/a_0.png';
-    private imgRight: string = '../../assets/images/avatar/a_1.png';
+    private imgLeft: string = '/borja/assets/images/avatar/a_-1.png';
+    private imgCenter: string = '/borja/assets/images/avatar/a_0_128.png';
+    private imgRight: string = '/borja/assets/images/avatar/a_1.png';
 
     private img = this.imgCenter;
 

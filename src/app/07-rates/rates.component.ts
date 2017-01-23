@@ -1,39 +1,54 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Rate, Period } from './ratebox/rate.model';
 
 @Component({
     selector: 'app-rates',
     templateUrl: './rates.component.html',
     styleUrls: ['./rates.component.scss']
 })
-export class RatesComponent implements OnInit {
+export class RatesComponent {
+
+    private _remotingRate = new Rate('remoting', 560, Period.DAY, 'Good if you need a full-stack developer but you are on the budget', [
+        'World class Java / Angular2 full-stack development',
+        'Daily online progress reporting',
+        'Weekly on-site reporting'
+    ]);
 
 
-    public technologyRating: number = 50;
-
-    public environmentRating: number = 50;
-
-    public distanceRating: number = 50;
-
-    public durationRating: number = 50;
-
-    result: number = 0;
+    private _onsiteRate = new Rate('on-site', 750, Period.DAY, 'Perfect in case you need some help on an existing project', [
+        'World class Java / Angular2 full-stack development',
+        'On-Site full / partial time',
+        'Benefit from my project mgmt / agile skills'
+    ]);
 
 
-    refreshRate() {
-        this.result = Math.floor(1200 - this.rateFactor() * 600.0);
-    }
 
-    private rateFactor() {
-        return ((this.technologyRating / 100.0) * 0.3 +
-            (this.environmentRating / 100.0) * 0.2 +
-            (this.distanceRating / 100.0) * 0.2 +
-            (this.durationRating / 100.0) * 0.3);
-    }
 
-    ngOnInit() {
-        this.refreshRate();
-    }
+
+
+    private _simpleWebsite = new Rate('simple website', 3900, Period.OTHER, 'You want to build your online presence', [
+        'Hassle-free turnkey solution',
+        'Graphic design',
+        'Web publishing',
+        'Social network integration',
+        'On-Page SEO and Google Analytics integration',
+        'MailChimp integration'
+    ]);
+
+    private _advancedWebsite = new Rate('advanced website', 5900, Period.OTHER, 'You want to attract online traffic to your business', [
+        'Simple website features included',
+        'Static Blog design / installation',
+        'Off-Page SEO techniques course'
+    ]);
+
+    private _proWebsite = new Rate('professional website', 7900, Period.OTHER, 'You need to expose your data or sell your stuff online.', [
+        'Advanced website features included',
+        'Database design and custom templating',
+        'Shop / Payment solution integration'
+    ]);
 
 
 
 }
+
+

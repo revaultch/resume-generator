@@ -1,0 +1,21 @@
+<div class="rating-box">
+    <div class="top">
+        <div class="title">{{rate.name}}</div>
+        <div class="startingat">starting at</div>
+        <div class="price">
+            <span class="currency">CHF</span>
+            <span class="value">{{rate.price}}</span>
+            <span class="period">{{rate.period == Period.DAY ? '/ day' : ''}}</span>
+        </div>
+        <div class="good-for">{{rate.goodFor}}</div>
+        <div class="star"></div>
+    </div>
+    <div class="bottom">
+        <ul>
+            <li *ngFor="let package of rate.packageList">
+                {{package}}
+            </li>
+        </ul>
+        <button class="selectplan">select plan</button>
+    </div>
+</div>

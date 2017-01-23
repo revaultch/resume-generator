@@ -1,48 +1,50 @@
 @import '../../scss/colors';
-@import 'slider';
+@import '../../scss/fonts';
 
 #rates {
-    margin-top : 40px;
-    margin-bottom : 40px;
-    padding-top : 40px;
-    padding-bottom : 40px;
-    background-color: $white;
-    display:flex;
-    flex-direction:column;
-    border : 1px solid $border-grey;
-    div {
-        display:flex;
-        flex-direction:row;
-        width : 100%;
-        margin-bottom : 40px;
-        span {
-            width : 25%;
-            padding-right : 10px;
-            padding-left : 10px;
-            margin-top : 10px;
-            color : black;
-            font-size : 0.8em;
-        }
-        span:nth-child(1) {
-            text-align:right;
-        }
-        input {
-            width : 50%;
-        }
-        &.rate {
-            display:flex;
-            flex-direction:column;
-            margin-top : 40px;
-            span {
-                width:100%;
-                text-align: center;
-                font-size : 1.2em;
-            }
-            h1 {
-                color : $orange !important;
-                font-size : 2.0em !important;
-            }
+    p {
+        &.title {
+            font-size: 1.6em;
+            text-align: center;
+            padding-top : 40px;
+            padding-bottom : 20px;
+            text-transform: uppercase;
         }
     }
-
 }
+
+.rate-line {
+    display : flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    margin-top : 40px;
+    margin-bottom : 40px;
+    app-ratebox {
+        padding-left: 20px;
+        padding-right: 20px;
+        width : 100%;
+    }
+    
+}
+
+.rate-line:nth-child(1) {
+    flex-basis : 50%;
+}
+
+
+/deep/ section:nth-child(2) {
+    > .rate-line{
+        flex-basis : 33%;
+        > app-ratebox {
+            > .rating-box {
+                > .bottom {
+                > ul {
+                        min-height : 300px !important;
+                    }
+                }
+            }    
+        }
+    }
+}
+ 

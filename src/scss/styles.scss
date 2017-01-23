@@ -49,7 +49,15 @@ h1, h2, h3, h4 {
 section {
     padding-top : 60px;
     padding-bottom : 60px;
+
+    b {
+        font-family: $base-regular-font-family ;
+    }
+    
 }
+
+
+
 
 .section-w-padding {
     box-sizing: border-box;
@@ -128,11 +136,11 @@ app-companies {
 
 
 app-rates {
-    background-color:$light-grey;
-    color : $black;
+    background-color:$white;
+    color : $dark-blue;
     h1 {
         text-align : center;
-        color : $orange;
+        color : $light-blue;
     }
     @extend .section-w-padding;
 }

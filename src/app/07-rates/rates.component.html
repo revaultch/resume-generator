@@ -1,32 +1,29 @@
 <h1>RATES</h1>
-<p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+<section>
+    <p>Here is a price list based on some classic cases. Please note that the following are generic / best-case scenarios. For additional information, if you have some more specific input please contact me. </p>
+    <p>Also keep in mind that time and material plans apply only for projects > than 20 man days.</p>
+    <p>Other restrictions may apply given the type of project / environment.</p>
+</section>
 <div id="rates">
-
-    <div>
-        <span>bleeding edge</span>
-        <input type="range" [(ngModel)]="technologyRating" min="0" max="100" (change)="refreshRate()"/>
-        <span>cutting edge</span>
-    </div>
-
-    <div>
-        <span>politics everywhere</span>
-        <input type="range" [(ngModel)]="environmentRating" min="0" max="100"  (change)="refreshRate()"/>
-        <span>friendly team</span>
-    </div>
-    <div>
-        <span>far far away</span>
-        <input type="range" [(ngModel)]="distanceRating" min="0" max="100"  (change)="refreshRate()"/>
-        <span>close home w/remoting</span>
-    </div>
-    <div>
-        <span>one shot quick dev</span>
-        <input type="range" [(ngModel)]="durationRating" min="0" max="100"  (change)="refreshRate()"/>
-        <span>long term project</span>
-    </div>
-    
-    <div class="rate"><span>An approximate cost of</span><h1>{{result}} CHF / $</h1><span>per day</span></div>
-
+    <section>
+        <p class="title">Time and material plans</p>
+        <div class="rate-line">
+            <app-ratebox [rate]="_remotingRate">
+            </app-ratebox>
+            <app-ratebox [rate]="_onsiteRate">
+            </app-ratebox>
+        </div>
+    </section>
+    <section>
+        <p class="title">Fixed price plans</p>
+        <div class="rate-line">
+            <app-ratebox [rate]="_simpleWebsite">
+            </app-ratebox>
+            <app-ratebox [rate]="_advancedWebsite">
+            </app-ratebox>
+            <app-ratebox [rate]="_proWebsite">
+            </app-ratebox>
+        </div>
+    </section>
 </div>
-
-
-<p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+<p>Please note that above prices above are all pre-tax.</p>

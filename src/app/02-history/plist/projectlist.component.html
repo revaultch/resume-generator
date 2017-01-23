@@ -2,7 +2,7 @@
     <li *ngFor="let project of projects; trackBy: projectTrackByFn" [class.selected]="_selected?.id === project.id" (click)="select(project)">
         <div>
             <div>
-                <div [ngStyle]="{background: 'url(../../assets/images/logos/' + project.logo + '.png)'}">
+                <div [ngStyle]="{background: 'url(/borja/assets/images/logos/' + project.logo + '.png)'}">
                     &nbsp;
                 </div>
             </div>
