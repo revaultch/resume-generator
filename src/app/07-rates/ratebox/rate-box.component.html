@@ -1,4 +1,4 @@
-<div class="rating-box">
+<div class="rating-box" [ngClass]="{'selected' : isSelected}">
     <div class="top">
         <div class="title">{{rate.name}}</div>
         <div class="startingat">starting at</div>
@@ -16,6 +16,6 @@
                 {{package}}
             </li>
         </ul>
-        <button class="selectplan">select plan</button>
+        <button class="selectplan" (click)="selectPlan()">select plan</button>
     </div>
 </div>

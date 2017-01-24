@@ -1,5 +1,5 @@
 import {
-    Component, Input, Inject, ChangeDetectionStrategy
+    Component, Input, Output, EventEmitter, Inject, ChangeDetectionStrategy
 } from '@angular/core';
 
 import {Rate, Period, PeriodAware} from './rate.model';
@@ -14,8 +14,14 @@ import {Rate, Period, PeriodAware} from './rate.model';
 export class RateBoxComponent {
 
     @Input() rate: Rate;
+    @Input() isSelected: boolean = false;
+    @Output() selected = new EventEmitter();
 
     constructor() {
+    }
+
+    selectPlan() {
+        this.selected.emit({value : this.rate});
     }
 
 }

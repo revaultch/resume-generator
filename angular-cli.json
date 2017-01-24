@@ -17,11 +17,11 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "../src/scss/styles.scss",
-        "../node_modules/vis/dist/vis-timeline-graph2d.min.css"
+        "../src/scss/styles.scss"
       ],
       "scripts": [
-        "../node_modules/vis/dist/vis-timeline-graph2d.min.js"
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/jquery.easing/jquery.easing.min.js"
       ],
       "environments": {
         "source": "environments/environment.ts",

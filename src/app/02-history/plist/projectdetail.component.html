@@ -19,8 +19,8 @@
         <div>
             <h2>Roles</h2>
             <ul>
-                <li *ngFor="let role of project.roles; let i = index;">
-                    {{role}}
+                <li>
+                    {{project.roles.join(", ")}}
                 </li>
             </ul>
         </div>

@@ -8,9 +8,9 @@
 </app-skills>
 <app-companies [names]="logos">
 </app-companies>
-<app-rates>
+<app-rates (selected)="selectPlan($event)">
 </app-rates>
-<app-contactform>
+<app-contactform [selectedPlan]="_selectedPlan?.name">
 </app-contactform>
 <app-footer>
 </app-footer>

@@ -1,6 +1,6 @@
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmailValidator } from './email.validator';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Http, Headers, Request, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
@@ -10,6 +10,8 @@ import { Observable } from 'rxjs/Rx';
   styleUrls: ['./contactform.component.scss']
 })
 export class ContactFormComponent implements OnInit {
+
+  @Input() selectedPlan: string;
 
   private formspreeUrl = 'https://formspree.io/littleboris@gmail.com';
 
@@ -26,12 +28,14 @@ export class ContactFormComponent implements OnInit {
       name : ['', Validators.required],
       company : [''],
       email : ['', Validators.compose([Validators.required, EmailValidator.email])],
-      message : ['', Validators.required]
+      message : ['', Validators.required],
+      ratePlan : ['']
     });
   }
 
   onSubmit({value, valid}: {value: any, valid: boolean}) {
 
+    value.ratePlan = this.selectedPlan;
     let bodyString = JSON.stringify(value);
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });

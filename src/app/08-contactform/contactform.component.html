@@ -10,7 +10,6 @@
     <input [ngClass]="{'error' : !data.controls.company.valid}" type="text" placeholder="Company" formControlName="company" >
     <input [ngClass]="{'error' : !data.controls.email.valid}" type="text" placeholder="email" formControlName="email">
     <textarea [ngClass]="{'error' : !data.controls.message.valid}" placeholder="Dear Sir ..." formControlName="message"></textarea>
-
     <div class="message-sent" *ngIf="_formSent">
         Message was sent ! Thank you for your time.
     </div>

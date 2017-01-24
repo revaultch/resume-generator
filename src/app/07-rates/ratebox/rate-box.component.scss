@@ -12,7 +12,7 @@ $box-grey:#f4f4f4;
     flex-direction: column;
     align-items:stretch;    
 
-    &:hover {
+    &:hover, &.selected {
         cursor : pointer;
         transform: scale(1.01);
         > .top {
@@ -37,13 +37,13 @@ $box-grey:#f4f4f4;
         flex : auto;
         .star {
             position:absolute;
-            width : 33px;
             height : 27px;
             bottom : -19px;
             background : url(/borja/assets/images/rates/star.png) no-repeat center;
             background-size: 33px 27px;
             background-repeat : no-repeat;
             align-self : center;
+            width : 100%;
         }
         .title {
             text-align: center;
@@ -126,3 +126,4 @@ $box-grey:#f4f4f4;
         }
     }
 }
+

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Rate, Period } from './ratebox/rate.model';
 
 @Component({
@@ -7,6 +7,9 @@ import { Rate, Period } from './ratebox/rate.model';
     styleUrls: ['./rates.component.scss']
 })
 export class RatesComponent {
+
+    @Output() selected = new EventEmitter();
+    private _selectedRateplan: Rate;
 
     private _remotingRate = new Rate('remoting', 560, Period.DAY, 'Good if you need a full-stack developer but you are on the budget', [
         'World class Java / Angular2 full-stack development',
@@ -20,10 +23,6 @@ export class RatesComponent {
         'On-Site full / partial time',
         'Benefit from my project mgmt / agile skills'
     ]);
-
-
-
-
 
 
     private _simpleWebsite = new Rate('simple website', 3900, Period.OTHER, 'You want to build your online presence', [
@@ -47,6 +46,15 @@ export class RatesComponent {
         'Shop / Payment solution integration'
     ]);
 
+
+    selectRate(rate: Rate) {
+        this._selectedRateplan = rate;
+        this.selected.emit({value : rate});
+    }
+
+    isSelected(rate: Rate) {
+        return rate === this._selectedRateplan;
+    }
 
 
 }

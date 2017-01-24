@@ -48,3 +48,12 @@
     }
 }
  
+
+@media screen and (max-width: 600px) {
+     .rate-line {
+         flex-wrap:wrap;
+         app-ratebox {
+             padding-bottom : 40px;
+         }
+     }
+}
