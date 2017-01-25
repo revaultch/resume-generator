@@ -2,9 +2,9 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 
 
 @Directive({
-    selector: '[loadedDecorator]'
+    selector: '[loadedDirective]'
 })
-export class LoadedDecoratorDirective {
+export class LoadedDirective {
 
 
     @HostBinding('class.loaded') _loaded: boolean = false;

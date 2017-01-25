@@ -1,6 +1,4 @@
-import {
-    Component, Input, Inject, ElementRef, ChangeDetectionStrategy
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Inject, Input } from '@angular/core';
 
 import { WorkflowEventService } from '../common/workflow/workflowevent.service';
 import { EnterViewportWorkflowEvent, InViewportWorkflowEvent, ExitViewportWorkflowEvent } from '../common/workflow/workflowevent.model';
@@ -17,8 +15,21 @@ export class CompanyLogoComponent {
     @Input() name: string;
     @Input() highlight: boolean;
 
+
+    private _windowLoaded = false;
+
+    @HostListener('window:load')
+    onLoad() {
+        this._windowLoaded = true;
+    }
+
     constructor(@Inject(WorkflowEventService) private _workflowEventService,
     private _el: ElementRef) {
+    }
+
+    getLogo() {
+        let logo = this._windowLoaded ? this.name : 'nologo';
+        return '/borja/assets/images/logos/' + logo + '.png';
     }
 
 }

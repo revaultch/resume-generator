@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { Project } from '../../common/project.model';
 
 @Component({
@@ -14,6 +14,13 @@ export class ProjectlistComponent {
 
     private _selected: Project;
 
+    private _windowLoaded = false;
+
+    @HostListener('window:load')
+    onLoad() {
+      this._windowLoaded = true;
+    }
+
 
     select(project: Project) {
       this._selected = project;
@@ -22,6 +29,11 @@ export class ProjectlistComponent {
 
     projectTrackByFn(i: number, project: Project) {
       return project.id;
+    }
+
+    getBackground(project: Project) {
+      let logo = this._windowLoaded ? project.logo : 'nologo';
+      return 'url(/borja/assets/images/logos/' + logo + '.png)';
     }
 
 

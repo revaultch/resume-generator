@@ -28,7 +28,7 @@ import { KnobComponent } from '../ext/knob/knob.component';
 import { DataService } from './common/data.service';
 import { WindowRef } from './common/window/windowref.service';
 import { WorkflowEventService } from './common/workflow/workflowevent.service';
-import { LoadedDecoratorDirective } from './common/directives/loaded-decorator.directive';
+import { LoadedDirective } from './common/directives/loaded.directive';
 
 import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
 
@@ -56,7 +56,7 @@ import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
     FooterComponent,
     KnobComponent,
     RateBoxComponent,
-    LoadedDecoratorDirective
+    LoadedDirective
   ],
   entryComponents: [], // used for dynamically allocated components
   imports: [

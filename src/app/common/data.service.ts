@@ -3,7 +3,6 @@ import { Observable } from 'rxjs/Rx';
 import { Http } from '@angular/http';
 import { Experience } from './experience.model';
 import { Skill, SkillCriteria } from '../04-skills/skills.model';
-import * as JSONPath from 'jsonpath-plus';
 
 /**
  * 

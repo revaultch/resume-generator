@@ -1,4 +1,5 @@
 .logo {
+    display:none;
     -webkit-filter: grayscale(1);
     -webkit-filter: grayscale(100%);
     filter: gray;
@@ -13,6 +14,10 @@
         -webkit-filter: none;
         filter: none;
         transform: scale(1.15);        
+    }
+
+    &.loaded {
+        display:inherit;
     }
 }
 
