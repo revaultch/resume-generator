@@ -10,6 +10,7 @@
 html {
     box-sizing: border-box;
     height : 100%;
+    overflow-y: scroll;
     body {
         font-family: $paragraph-font-family;
         text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -31,8 +32,11 @@ h1, h2, h3, h4 {
 }
 
 .icon {
-    font-family: $icon-font-family !important;
-    -webkit-font-smoothing: antialiased !important;
+    > a {
+        font-family: $icon-font-family !important;
+        text-rendering: auto !important;
+        text-shadow: 0 0 0 0 !important;
+    }
 }
 
 .section {

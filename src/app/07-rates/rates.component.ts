@@ -25,7 +25,7 @@ export class RatesComponent {
     ]);
 
 
-    private _simpleWebsite = new Rate('simple website', 3900, Period.OTHER, 'You want to build your online presence', [
+    private _simpleWebsite = new Rate('simple website', 2900, Period.OTHER, 'You want to build your online presence', [
         'Hassle-free turnkey solution',
         'Graphic design',
         'Web publishing',
@@ -34,13 +34,13 @@ export class RatesComponent {
         'MailChimp integration'
     ]);
 
-    private _advancedWebsite = new Rate('advanced website', 5900, Period.OTHER, 'You want to attract online traffic to your business', [
+    private _advancedWebsite = new Rate('advanced website', 4900, Period.OTHER, 'You want to attract online traffic to your business', [
         'Simple website features included',
         'Static Blog design / installation',
         'Off-Page SEO techniques course'
     ]);
 
-    private _proWebsite = new Rate('professional website', 7900, Period.OTHER, 'You need to expose your data or sell your stuff online.', [
+    private _proWebsite = new Rate('professional website', 6900, Period.OTHER, 'You need to expose your data or sell your stuff online.', [
         'Advanced website features included',
         'Database design and custom templating',
         'Shop / Payment solution integration'
