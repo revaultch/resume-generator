@@ -38,7 +38,7 @@ export class RatesComponent implements OnInit {
     ]);
 
 
-    private _simpleWebsite_en = new Rate('simple website', 2900, Period.OTHER, 'You want to build your online presence', [
+    private _simpleWebsite_en = new Rate('simple website', 3900, Period.OTHER, 'You want to build your online presence', [
         'Hassle-free turnkey solution',
         'Graphic design',
         'Web publishing',
@@ -79,7 +79,7 @@ export class RatesComponent implements OnInit {
     ]);
 
 
-    private _simpleWebsite_fr = new Rate('site web simple', 2900, Period.OTHER, 'Vous voulez une présence en ligne', [
+    private _simpleWebsite_fr = new Rate('site web simple', 3900, Period.OTHER, 'Vous voulez une présence en ligne', [
         'Solution clé en main sans tracas',
         'Design graphique',
         'Publication web',
