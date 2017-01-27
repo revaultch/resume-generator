@@ -29,6 +29,8 @@ import { DataService } from './common/data.service';
 import { WindowRef } from './common/window/windowref.service';
 import { WorkflowEventService } from './common/workflow/workflowevent.service';
 import { LoadedDirective } from './common/directives/loaded.directive';
+import { i18nDirective } from './common/directives/i18n.directive';
+import { i18nService } from './common/directives/i18n.service';
 
 import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
 
@@ -56,7 +58,8 @@ import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
     FooterComponent,
     KnobComponent,
     RateBoxComponent,
-    LoadedDirective
+    LoadedDirective,
+    i18nDirective
   ],
   entryComponents: [], // used for dynamically allocated components
   imports: [
@@ -65,7 +68,7 @@ import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [DataService, SkillsService, HistoryService, WindowRef, WorkflowEventService],
+  providers: [DataService, SkillsService, HistoryService, WindowRef, WorkflowEventService, i18nService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Rate, Period } from './ratebox/rate.model';
 
 @Component({
@@ -6,26 +6,39 @@ import { Rate, Period } from './ratebox/rate.model';
     templateUrl: './rates.component.html',
     styleUrls: ['./rates.component.scss']
 })
-export class RatesComponent {
+export class RatesComponent implements OnInit {
 
     @Output() selected = new EventEmitter();
+
     private _selectedRateplan: Rate;
 
-    private _remotingRate = new Rate('remoting', 560, Period.DAY, 'Good if you need a full-stack developer but you are on the budget', [
+    private _remotingRate;
+
+    private _onsiteRate;
+
+    private _simpleWebsite;
+
+    private _advancedWebsite;
+
+    private _proWebsite;
+
+
+
+    private _remotingRate_en = new Rate('remoting', 560, Period.DAY, 'Good if you need a full-stack developer but you are on the budget', [
         'World class Java / Angular2 full-stack development',
         'Daily online progress reporting',
         'Weekly on-site reporting'
     ]);
 
 
-    private _onsiteRate = new Rate('on-site', 750, Period.DAY, 'Perfect in case you need some help on an existing project', [
+    private _onsiteRate_en = new Rate('on-site', 750, Period.DAY, 'Perfect in case you need some help on an existing project', [
         'World class Java / Angular2 full-stack development',
         'On-Site full / partial time',
         'Benefit from my project mgmt / agile skills'
     ]);
 
 
-    private _simpleWebsite = new Rate('simple website', 2900, Period.OTHER, 'You want to build your online presence', [
+    private _simpleWebsite_en = new Rate('simple website', 2900, Period.OTHER, 'You want to build your online presence', [
         'Hassle-free turnkey solution',
         'Graphic design',
         'Web publishing',
@@ -34,17 +47,76 @@ export class RatesComponent {
         'MailChimp integration'
     ]);
 
-    private _advancedWebsite = new Rate('advanced website', 4900, Period.OTHER, 'You want to attract online traffic to your business', [
+    private _advancedWebsite_en = new Rate('advanced website', 4900, Period.OTHER, 'You want to attract online traffic to your business', [
         'Simple website features included',
         'Static Blog design / installation',
         'Off-Page SEO techniques course'
     ]);
 
-    private _proWebsite = new Rate('professional website', 6900, Period.OTHER, 'You need to expose your data or sell your stuff online.', [
+    private _proWebsite_en = new Rate('professional website', 6900, Period.OTHER, 'You need to expose your data or sell your stuff online.', [
         'Advanced website features included',
         'Database design and custom templating',
         'Shop / Payment solution integration'
     ]);
+
+
+
+
+    /////// FR //////
+
+
+    private _remotingRate_fr = new Rate('à distance', 560, Period.DAY, 'Bon si vous avez besoin d\'un développeur complet, mais vous êtes limité par le budget', [
+        'Développement Java / Angular2 de classe mondiale !',
+        'Rapports d\'activité quotidiens en ligne',
+        'Rapports hebdomadaires sur site'
+    ]);
+
+
+    private _onsiteRate_fr = new Rate('sur site', 750, Period.DAY, 'Parfait si vous avez besoin d\'aide sur un projet existant', [
+        'Développement Java / Angular2 de classe mondiale !',
+        'Temps plein / partiel sur place',
+        'Profitez de mes compétences en gestion de projet / agilité'
+    ]);
+
+
+    private _simpleWebsite_fr = new Rate('site web simple', 2900, Period.OTHER, 'Vous voulez une présence en ligne', [
+        'Solution clé en main sans tracas',
+        'Design graphique',
+        'Publication web',
+        'Intégration réseaux sociaux',
+        'On-Page SEO et Intégration Google Analytics',
+        'Integration MailChimp'
+    ]);
+
+    private _advancedWebsite_fr = new Rate('site web avancé', 4900, Period.OTHER, 'Vous voulez attirer des clients sur votre site', [
+        'Fonctionnalités site web simple comprises',
+        'Installation et design d\'un blog',
+        'Cours SEO Off-Page'
+    ]);
+
+    private _proWebsite_fr = new Rate('site web professionnel', 6900, Period.OTHER, 'Vous voulez exposer vos données et/ou vendre en ligne', [
+        'Fonctionnalités site web avancé comprises',
+        'Conception base de données et modèles personnalisés',
+        'Integration shop en ligne / paiement'
+    ]);
+
+
+
+    ngOnInit() {
+        if (navigator.language === 'fr') {
+            this._remotingRate = this._remotingRate_fr;
+            this._onsiteRate = this._onsiteRate_fr;
+            this._simpleWebsite = this._simpleWebsite_fr;
+            this._advancedWebsite = this._advancedWebsite_fr;
+            this._proWebsite = this._proWebsite_fr;
+        } else {
+            this._remotingRate = this._remotingRate_en;
+            this._onsiteRate = this._onsiteRate_en;
+            this._simpleWebsite = this._simpleWebsite_en;
+            this._advancedWebsite = this._advancedWebsite_en;
+            this._proWebsite = this._proWebsite_en;
+        }
+    }
 
 
     selectRate(rate: Rate) {

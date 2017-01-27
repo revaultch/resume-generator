@@ -1,39 +1,38 @@
-<h1>AT A GLANCE</h1>
+<h1 i18n>AT A GLANCE^POUR RESUMER</h1>
 
 <section>
-    <p>
-    Welcome to my dynamic resume ! This website is my playground. It is my starting point when it comes to trying new development tools. Since it's mostly backed by my resume's data, it is also a good way for me to introduce myself and give some insight into my work experience and skills.
+    <p i18n>
+    Welcome to my dynamic resume ! This website is my playground. It is my starting point when it comes to trying new development tools. Since it's mostly backed by my resume's data, it is also a good way for me to introduce myself and give some insight into my work experience and skills.^Bienvenue à mon CV dynamique! Ce site web est un peu mon terrain de jeu. Il s'agit d'un point d'entrée pour moi pour tout ce qui touche à l'exploration de nouveaux outils de développement (particulièrement front-end). Etant donné qu'il se base principalement sur les données de mon CV, c'est également un bon moyen pour moi de me présenter et donner un peu d'information sur mon expérience et mes compétences.
     </p>
-    <p>
-    At the moment you can find a set of components below that will let you dig through all my resume data. 
+    <p i18n>
+    At the moment you can find a set of components below that will let you dig through all my resume data.^Vous pourrez trouver ci-dessous un ensemble de composants qui vous permettront d'explorer les données de mon CV.
     </p>
-    <p>
-    I promise I'll try to keep things as clean as possible. Please leave me a note in case you see something weird. (Valid also for my english since I'm not an English native speaker). 
+    <p i18n>
+    I promise I'll try to keep things as clean as possible. Please leave me a note in case you see something weird. (Valid also for my english since I'm not an English native speaker).^Promis, je vais essayer de pas tout casser. Merci de me laisser une note si c'était le cas et si vous voyez quelque chose de bizarre. 
     </p>
-    <p>
-    In case you don't know me yet I've put together a <b>list of values</b> that I believe define me best. 
+    <p i18n>
+    In case you don't know me yet I've put together a <b>list of values</b> that I believe define me best.^Si vous ne me connaissez pas encore, j'ai compilé une liste avec <b>les valeurs</b> qui je crois me correspondent le mieux.
     </p>
 </section>
 
 <div class="detail-box-line">
-    <app-detailbox logo="icon-heart" title="passion driven">Quality takes time and effort. There's no such thing if you lack passion in what you do. I love my job and feel very fortunate that my passion can pay my bills.</app-detailbox>
-    <app-detailbox logo="icon-settings" title="hard working" >In today's constant changing environments with such a variety of platforms and technologies there's no other way to make a difference. But again, when you love what you do, <span style="white-space: nowrap">is it still work ?</span></app-detailbox>
-    <app-detailbox logo="icon-clock" title="delivery focused">
-Because of increasingly competitive markets, time to market has become a major factor of success. I strongly believe in Lean Product Development and MVP approach.        
+    <app-detailbox logo="icon-heart" [title]="i18n('passion driven^poussé par la passion')">Quality takes time and effort. There's no such thing if you lack passion in what you do.^La qualité prend du temps et de la persévérance. Il n'y a rien de tel si vous manquez de passion dans ce que vous faites.</app-detailbox>
+    <app-detailbox logo="icon-settings" [title]="i18n('hard working^travailleur acharné')">In today's constant changing environments with such a variety of platforms and technologies there's no other way to make a difference. But again, when you love what you do, <span style="white-space: nowrap">is it still work ?</span>^Dans des environnements en évolution constante avec une telle variété de plate-formes et de technologies, il n'y a pas d'autre moyen de faire la différence. Mais est-ce qu'on peut appeler ça du travail quand on aime <span style="white-space: nowrap">ce qu'on fait ?</span></app-detailbox>
+    <app-detailbox logo="icon-clock" [title]="i18n('delivery focused^concentré sur le résultat')" >
+Because of increasingly competitive business environments, time to market has become a major factor of success. I strongly believe in Lean Product Development and MVP approach.^Avec des environmements de plus en plus concurrentiels, le délai de mise sur le marché est devenu un facteur majeur de succès. Je suis fermement convaincu de l'approche "Lean Product Development" et MVP.</app-detailbox>
+</div>
+
+<div class="detail-box-line">
+    <app-detailbox logo="icon-email-luminosity" [title]="i18n('persistent^persévérant')">
+As someone said 'Failure cannot cope with persistence'. I made this my motto as I think there's always a solution to a problem. Success is just a matter of not giving up too early.^Quelqu'un a dit 'L'échec ne tient pas face à la persévérance'. C'est devenu ma devise car je crois qu'il existe toujours une solution pour un problème donné. Le succès est fortement lié au fait de ne pas laisser tomber trop tôt.       
+    </app-detailbox>
+    <app-detailbox logo="icon-user-add" [title]="i18n('team player^bon équipier')">
+Success is a team thing. You will never accomplish great things without the help of others. Therefore I value communication and interpersonal skills above everything else.^Le succès est une affaire d'équipe. Vous n'arriverez à accomplir de grandes choses qu'avec l'aide d'autrui. C'est pourquoi je mets la communication et les compétences interpersonnelles par-dessus tout.      
     </app-detailbox>
 </div>
 
 <div class="detail-box-line">
-    <app-detailbox logo="icon-email-luminosity" title="persistent">
-As someone said 'Failure cannot cope with persistence'. I made this my motto as I think there's always a solution to a problem. Success is just a matter of not giving up too early.        
-    </app-detailbox>
-    <app-detailbox logo="icon-user-add" title="team player">
-Success is a team thing. You will never accomplish great things without the help of others. Therefore I value  communication and interpersonal skills above everything else.        
-    </app-detailbox>
-</div>
-
-<div class="detail-box-line">
-    <app-detailbox logo="icon-world" title="curious by nature" >
-        Learn or retire. I choose not to retire yet. Since I started working in the development business, I never stopped learning and this is part of what keeps me moving forward still today.
+    <app-detailbox logo="icon-world" [title]="i18n('curious by nature^curieux de nature')" >
+        Learn or retire. I choose not to retire yet. Since I started working in the development business, I never stopped learning and this is part of what keeps me moving forward still today.^Apprendre ou prendre sa retraite? Je ne suis pas prêt de prendre ma retraite! Depuis que j'ai démarré dans ce métier, je n'ai jamais cessé d'apprendre et cela fait partie de ce qui me permet d'avancer encore aujourd'hui.
     </app-detailbox>
 </div>

@@ -28,25 +28,26 @@
     
 }
 
-.rate-line:nth-child(1) {
-    flex-basis : 50%;
-}
-
-
-/deep/ section:nth-child(2) {
+/deep/ section:nth-child(1) {
     > .rate-line{
         flex-basis : 33%;
         > app-ratebox {
             > .rating-box {
                 > .bottom {
-                > ul {
-                        min-height : 300px !important;
-                    }
+                    > ul {
+                            min-height : 300px !important;
+                        }
                 }
             }    
         }
     }
 }
+
+.rate-line:nth-child(2) {
+    flex-basis : 50%;
+}
+
+
  
 
 @media screen and (max-width: 800px) {

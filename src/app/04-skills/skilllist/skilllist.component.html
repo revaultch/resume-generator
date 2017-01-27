@@ -5,8 +5,8 @@
             <div><span>{{skill.weeksDone}}</span></div>
             <div><span>{{skill.nbOfProjects}}</span></div>
             <div><span>{{skill.linkedInScore}}</span></div>
-            <div>{{skill.lastTimeSeen == 0 ? 'currently in use' : 'used ' + skill.lastTimeSeen * -1 + ' days ago'}}</div>
+            <div>{{getInUse(skill)}}</div>
         </div>
     </li>
 </ul>
-<div class="nocontent" [hidden]="skills.length > 0">Sorry. There's no content to be displayed.</div>
+<div class="nocontent" [hidden]="skills.length > 0" i18n>Sorry. There's no content to be displayed.^Désolé. Il n'y a pas de contenu à afficher.</div>
