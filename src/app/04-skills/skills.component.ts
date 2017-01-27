@@ -10,20 +10,28 @@ import { SkilllistComponent } from './skilllist/skilllist.component';
     templateUrl: './skills.component.html',
     styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements AfterViewInit {
+export class SkillsComponent implements AfterViewInit, OnInit {
 
     private skillCriteria: SkillCriteria = new SkillCriteria();
 
     private skills: Array<Skill> = new Array<Skill>();
 
 
-    private _presets: Array<any> = [
+    private _presets: Array<any>;
+
+    private _presets_en: Array<any> = [
         { id: -1, name: 'Select a preset' },
         { id: 1, name: 'Top rated in LinkedIn' },
         { id: 2, name: 'Top used in projects' },
         { id: 3, name: 'Top time spent'}];
 
-    private _selectedPreset: any = this._presets[0];
+    private _presets_fr: Array<any> = [
+        { id: -1, name: 'Selectionnez un préréglage' },
+        { id: 1, name: 'Meilleures notes LinkedIn' },
+        { id: 2, name: 'Plus utilisés dans des projets' },
+        { id: 3, name: 'Plus de temps passé'}];
+
+    private _selectedPreset: any;
 
     private baseKnobOptions = {
         'skin': {
@@ -114,6 +122,14 @@ export class SkillsComponent implements AfterViewInit {
 
     constructor( @Inject(SkillsService) private _skillsService: SkillsService) { }
 
+    ngOnInit() {
+        if (navigator.language == 'fr') {
+            this._presets = this._presets_fr;
+        } else {
+            this._presets = this._presets_en;
+        }
+        this._selectedPreset = this._presets[0]
+    }
 
     ngAfterViewInit() {
         this.obs$.debounceTime(500).startWith('').subscribe((click) => {

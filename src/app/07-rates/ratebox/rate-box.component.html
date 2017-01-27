@@ -5,7 +5,7 @@
         <div class="price">
             <span class="currency">CHF</span>
             <span class="value">{{rate.price}}</span>
-            <span class="period">{{rate.period === Period.DAY ? '/ day' : ''}}</span>
+            <span class="period">{{getRatePeriod()}}</span>
         </div>
         <div class="good-for">{{rate.goodFor}}</div>
         <div class="star"></div>
