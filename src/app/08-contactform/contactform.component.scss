@@ -73,6 +73,7 @@ form[name = "contact-form"] {
             &:disabled {
                 background-color : $darken-grey  !important;
                 color :  $lighten-grey !important;
+                cursor : none;
             }
         }
     }

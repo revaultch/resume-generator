@@ -38,7 +38,7 @@ export class RatesComponent implements OnInit {
     ]);
 
 
-    private _simpleWebsite_en = new Rate('simple website', 3900, Period.OTHER, 'You want to build your online presence', [
+    private _simpleWebsite_en = new Rate('simple website', 2900, Period.OTHER, 'You want to build your online presence', [
         'Hassle-free turnkey solution',
         'Graphic design',
         'Web publishing',
@@ -47,13 +47,13 @@ export class RatesComponent implements OnInit {
         'MailChimp integration'
     ]);
 
-    private _advancedWebsite_en = new Rate('advanced website', 4900, Period.OTHER, 'You want to attract online traffic to your business', [
+    private _advancedWebsite_en = new Rate('advanced website', 3900, Period.OTHER, 'You want to attract online traffic to your business', [
         'Simple website features included',
         'Static Blog design / installation',
         'Off-Page SEO techniques course'
     ]);
 
-    private _proWebsite_en = new Rate('professional website', 6900, Period.OTHER, 'You need to expose your data or sell your stuff online.', [
+    private _proWebsite_en = new Rate('professional website', 5900, Period.OTHER, 'You need to expose your data or sell your stuff online.', [
         'Advanced website features included',
         'Database design and custom templating',
         'Shop / Payment solution integration'
@@ -79,7 +79,7 @@ export class RatesComponent implements OnInit {
     ]);
 
 
-    private _simpleWebsite_fr = new Rate('site web simple', 3900, Period.OTHER, 'Vous voulez une présence en ligne', [
+    private _simpleWebsite_fr = new Rate('site web simple', 2900, Period.OTHER, 'Vous voulez une présence en ligne', [
         'Solution clé en main sans tracas',
         'Design graphique',
         'Publication web',
@@ -88,13 +88,13 @@ export class RatesComponent implements OnInit {
         'Integration MailChimp'
     ]);
 
-    private _advancedWebsite_fr = new Rate('site web avancé', 4900, Period.OTHER, 'Vous voulez attirer des clients sur votre site', [
+    private _advancedWebsite_fr = new Rate('site web avancé', 3900, Period.OTHER, 'Vous voulez attirer des clients sur votre site', [
         'Fonctionnalités site web simple comprises',
         'Installation et design d\'un blog',
         'Cours SEO Off-Page'
     ]);
 
-    private _proWebsite_fr = new Rate('site web professionnel', 6900, Period.OTHER, 'Vous voulez exposer vos données et/ou vendre en ligne', [
+    private _proWebsite_fr = new Rate('site web professionnel', 5900, Period.OTHER, 'Vous voulez exposer vos données et/ou vendre en ligne', [
         'Fonctionnalités site web avancé comprises',
         'Conception base de données et modèles personnalisés',
         'Integration shop en ligne / paiement'
