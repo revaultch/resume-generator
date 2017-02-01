@@ -29,7 +29,7 @@ export class CompanyLogoComponent {
 
     getLogo() {
         let logo = this._windowLoaded ? this.name : 'nologo';
-        return '/borja/assets/images/logos/' + logo + '.png';
+        return 'assets/images/logos/' + logo + '.png';
     }
 
 }

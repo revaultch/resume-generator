@@ -14,7 +14,8 @@ div {
             display:flex;
             flex-direction : column;
             width : 60%;
-            font-family : $base-regular-font-family !important;
+            font-family:$lato-font ;
+            font-weight: 400;
 
             h2 {
                 font-size: 1.05em;
@@ -35,9 +36,9 @@ div {
 
                 li {
                     display: inline !important;
+                    font-weight: 400 !important;
                     &.odd {
-                        
-                     font-family:  $base-thin-font-family !important;
+                        font-weight: 100 !important;
                     }
                 }
             }

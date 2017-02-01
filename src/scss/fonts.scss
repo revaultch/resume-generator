@@ -1,39 +1,6 @@
 @import 'metrize.scss';
 
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 
-@font-face {
-  font-family: 'Lato Thin';
-  font-style: normal;
-  font-weight: 100;
-  src: url('/borja/assets/fonts/Lato-Thin.woff2') format('woff2'), 
-       url('/borja/assets/fonts/Lato-Thin.woff') format('woff'); 
-}
-
-@font-face {
-  font-family: 'Lato Regular';
-  font-style: normal;
-  font-weight: 200;
-  src: url('/borja/assets/fonts/Lato-Regular.woff2') format('woff2'), 
-       url('/borja/assets/fonts/Lato-Regular.woff') format('woff');
-}
-
-
-@font-face {
-  font-family: 'Lato Heavy';
-  font-style: bold;
-  font-weight: bolder;
-  src: url('/borja/assets/fonts/Lato-Heavy.woff2') format('woff2'), 
-       url('/borja/assets/fonts/Lato-Heavy.woff') format('woff');
-}
-
-$base-title-2-family : Lato Heavy, sans-serif;
-
-$base-main-title-font-family : Lato Thin, sans-serif;
-
-$base-thin-font-family : Lato Thin, sans-serif;
-
-$base-regular-font-family : Lato Regular, sans-serif;
-
-$paragraph-font-family : Lato Thin, sans-serif;
-
-$icon-font-family : Metrize-Icons, sans-serif;
+$lato-font : Lato, sans-serif;
+$icon-font-family : Metrize-Icons;

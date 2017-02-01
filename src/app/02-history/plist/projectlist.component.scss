@@ -7,7 +7,8 @@ ul {
     padding : 0;
     li {
         width: 100%;
-        font-family: $base-thin-font-family ;
+        font-family: $lato-font ;
+        font-weight: 300;
         border-bottom: 1px solid $light-grey;
         display:flex;
         flex-direction: column;
@@ -42,7 +43,8 @@ ul {
             }
             &:hover {
                 cursor : pointer;
-                font-family: $base-regular-font-family;
+                font-family: $lato-font ;
+                font-weight: 500;
             }
         }
 
@@ -70,7 +72,8 @@ ul {
 
 
         &.selected {
-            font-family: $base-regular-font-family;
+            font-family: $lato-font ;
+            font-weight: 500;
         }
     }
 

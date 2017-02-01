@@ -42,7 +42,8 @@
     > .yearmark {
         position: absolute;
         z-index: 11;
-        font-family: $base-thin-font-family;
+        font-family:$lato-font ;
+        font-weight: 300;
         font-size: 0.8em;
         padding: 0px !important;
         margin : 0px !important;
@@ -72,7 +73,8 @@
 
         &.terminal {
             > span {
-                font-family: $base-regular-font-family;
+                font-family:$lato-font ;
+                font-weight: 500;
             }
             > div {
                 left : 45px;

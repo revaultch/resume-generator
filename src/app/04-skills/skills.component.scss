@@ -16,7 +16,8 @@
       height : 40px;
       width: 45%;
       color : $dark-blue;
-      font-family:$base-thin-font-family ;
+          font-family:$lato-font ;
+          font-weight: 300;
       font-size : 0.9em;
       border : none;
       border-radius: 2px;
@@ -39,7 +40,8 @@
         flex-direction: column;
         > span {
           text-align:center;
-          font-family:$base-thin-font-family ;
+          font-family:$lato-font ;
+          font-weight: 300;
           font-size : 0.8em;
         }
       }
@@ -50,7 +52,8 @@
         flex:auto;
         > div {
           text-align:center;
-          font-family:$base-thin-font-family ;
+          font-family:$lato-font ;
+          font-weight: 300;
           font-size : 0.8em;
         }
       }

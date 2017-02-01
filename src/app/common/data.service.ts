@@ -79,7 +79,7 @@ export class DataService {
 
     private loadResume(): Observable<any> {
         return Observable.create(observer => {
-            this._http.get('/borja/data/db/resume.json').subscribe((result) => {
+            this._http.get('data/db/resume.json').subscribe((result) => {
                 let resume = JSON.parse(result.text());
                 observer.next(resume);
                 observer.complete();
@@ -90,7 +90,7 @@ export class DataService {
 
     private loadSkillsData(): Observable<any> {
         return Observable.create(observer => {
-            this._http.get('/borja/data/db/consolidated_skills.json').subscribe((result) => {
+            this._http.get('data/db/consolidated_skills.json').subscribe((result) => {
                 let skillsData = JSON.parse(result.text());
                 observer.next(skillsData);
                 observer.complete();

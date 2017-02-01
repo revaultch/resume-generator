@@ -33,7 +33,7 @@ export class ProjectlistComponent {
 
     getBackground(project: Project) {
       let logo = this._windowLoaded ? project.logo : 'nologo';
-      return 'url(/borja/assets/images/logos/' + logo + '.png)';
+      return 'url(assets/images/logos/' + logo + '.png)';
     }
 
 

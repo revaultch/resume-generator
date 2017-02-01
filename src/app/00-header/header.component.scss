@@ -16,16 +16,11 @@
         height : 649px;
         overflow:hidden;
         &.loaded {
-            background : url(/borja/assets/images/header/background.png);
+            background : url(assets/images/header/background.png);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover; 
         }
-    }
-
-    .shadow-load-bg {
-            display:none;
-            background : url(/borja/assets/images/header/background.png);
     }
     
 }
