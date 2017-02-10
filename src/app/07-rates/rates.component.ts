@@ -24,14 +24,14 @@ export class RatesComponent implements OnInit {
 
 
 
-    private _remotingRate_en = new Rate('remoting', 560, Period.DAY, 'Good if you need a full-stack developer but you are on the budget', [
+    private _remotingRate_en = new Rate('remoting', 0, Period.DAY, 'Good if you need a full-stack developer but you are on the budget', [
         'World class Java / Angular2 full-stack development',
         'Daily online progress reporting',
         'Weekly on-site reporting'
     ]);
 
 
-    private _onsiteRate_en = new Rate('on-site', 750, Period.DAY, 'Perfect in case you need some help on an existing project', [
+    private _onsiteRate_en = new Rate('on-site', 0, Period.DAY, 'Perfect in case you need some help on an existing project', [
         'World class Java / Angular2 full-stack development',
         'On-Site full / partial time',
         'Benefit from my project mgmt / agile skills'

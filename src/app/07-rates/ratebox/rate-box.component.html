@@ -4,7 +4,7 @@
         <div class="startingat" i18n>starting at^à partir de</div>
         <div class="price">
             <span class="currency">CHF</span>
-            <span class="value">{{rate.price}}</span>
+            <span class="value">{{rate.price != 0 ? rate.price : '???'}}</span>
             <span class="period">{{getRatePeriod()}}</span>
         </div>
         <div class="good-for">{{rate.goodFor}}</div>
