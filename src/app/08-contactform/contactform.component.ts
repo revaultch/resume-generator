@@ -6,8 +6,8 @@ import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-contactform',
-  templateUrl: './contactform.component.html',
-  styleUrls: ['./contactform.component.scss']
+  templateUrl: 'contactform.component.html',
+  styleUrls: ['contactform.component.scss']
 })
 export class ContactFormComponent implements OnInit {
 

@@ -7,8 +7,8 @@ import {i18nService} from '../../common/directives/i18n.service';
 
 @Component({
     selector: 'app-ratebox',
-    templateUrl: './rate-box.component.html',
-    styleUrls: ['./rate-box.component.scss'],
+    templateUrl: 'rate-box.component.html',
+    styleUrls: ['rate-box.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 @PeriodAware

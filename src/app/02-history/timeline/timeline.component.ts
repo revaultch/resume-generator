@@ -3,8 +3,8 @@ import { Project } from '../../common/project.model';
 
 @Component({
   selector: 'app-timeline',
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss'],
+  templateUrl: 'timeline.component.html',
+  styleUrls: ['timeline.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TimelineComponent implements OnChanges {

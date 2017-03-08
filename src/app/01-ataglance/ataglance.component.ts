@@ -3,8 +3,8 @@ import {i18nService} from '../common/directives/i18n.service';
 
 @Component({
   selector: 'app-ataglance',
-  templateUrl: './ataglance.component.html',
-  styleUrls: ['./ataglance.component.scss']
+  templateUrl: 'ataglance.component.html',
+  styleUrls: ['ataglance.component.scss']
 })
 export class AtaglanceComponent {
 

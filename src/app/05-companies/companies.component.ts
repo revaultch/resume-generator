@@ -9,8 +9,8 @@ import { WorkflowEventReceiver } from '../common/workflow/workfloweventreceiver.
 
 @Component({
     selector: 'app-companies',
-    templateUrl: './companies.component.html',
-    styleUrls: ['./companies.component.scss']
+    templateUrl: 'companies.component.html',
+    styleUrls: ['companies.component.scss']
 })
 export class CompaniesComponent implements AfterViewInit, WorkflowEventReceiver {
 

@@ -6,8 +6,8 @@ import { WorkflowEventReceiver } from '../common/workflow/workfloweventreceiver.
 
 @Component({
     selector: 'app-companylogo',
-    templateUrl: './companylogo.component.html',
-    styleUrls: ['./companylogo.component.scss'],
+    templateUrl: 'companylogo.component.html',
+    styleUrls: ['companylogo.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CompanyLogoComponent {

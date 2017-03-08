@@ -5,8 +5,8 @@ import { WorkflowEventReceiver } from '../../common/workflow/workfloweventreceiv
 
 @Component({
   selector: 'app-detailbox',
-  templateUrl: './detailbox.component.html',
-  styleUrls: ['./detailbox.component.scss']
+  templateUrl: 'detailbox.component.html',
+  styleUrls: ['detailbox.component.scss']
 })
 export class DetailBoxComponent implements AfterViewInit, WorkflowEventReceiver {
 

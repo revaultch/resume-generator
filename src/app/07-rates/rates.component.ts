@@ -3,8 +3,8 @@ import { Rate, Period } from './ratebox/rate.model';
 
 @Component({
     selector: 'app-rates',
-    templateUrl: './rates.component.html',
-    styleUrls: ['./rates.component.scss']
+    templateUrl: 'rates.component.html',
+    styleUrls: ['rates.component.scss']
 })
 export class RatesComponent implements OnInit {
 

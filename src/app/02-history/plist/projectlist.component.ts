@@ -3,8 +3,8 @@ import { Project } from '../../common/project.model';
 
 @Component({
   selector: 'app-projectlist',
-  templateUrl: './projectlist.component.html',
-  styleUrls: ['./projectlist.component.scss'],
+  templateUrl: 'projectlist.component.html',
+  styleUrls: ['projectlist.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectlistComponent {

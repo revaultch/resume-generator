@@ -8,8 +8,8 @@ import { WorkflowEventReceiver } from '../common/workflow/workfloweventreceiver.
 
 @Component({
     selector: 'app-history',
-    templateUrl: './history.component.html',
-    styleUrls: ['./history.component.scss']
+    templateUrl: 'history.component.html',
+    styleUrls: ['history.component.scss']
 
 })
 export class HistoryComponent implements OnInit, AfterViewInit, WorkflowEventReceiver {
