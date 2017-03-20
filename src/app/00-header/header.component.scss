@@ -16,11 +16,28 @@
         height : 649px;
         overflow:hidden;
         &.loaded {
-            background : url(assets/images/header/background.png);
+            background : url(/assets/images/header/background.png);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover; 
         }
     }
+    .download {
+        position:absolute;
+        width : 100%;
+        top : 450px;
+        text-align: center;
+        font-size : 8.0em;
+        color:white;
+        text-decoration: none;
+    }
     
 }
+
+@media screen and (max-width: 800px) {
+    .download {
+        font-size : 4.0em !important;
+        top : 500px !important;
+    }
+}
+
