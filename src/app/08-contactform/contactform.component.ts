@@ -13,7 +13,7 @@ export class ContactFormComponent implements OnInit {
 
   @Input() selectedPlan: string;
 
-  private formspreeUrl = 'https://formspree.io/littleboris@gmail.com';
+  private formspreeUrl = 'https://formspree.io/borja@revault.ch';
 
   private data: FormGroup;
 
