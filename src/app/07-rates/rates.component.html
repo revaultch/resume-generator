@@ -6,6 +6,15 @@
 </section>
 <div id="rates">
     <section>
+        <p class="title" i18n>Time and material plans^Plans tarifs journaliers</p>
+        <div class="rate-line">
+            <app-ratebox [rate]="_remotingRate" [isSelected]="isSelected(_remotingRate)" (selected)="selectRate($event.value)">
+            </app-ratebox>
+            <app-ratebox [rate]="_onsiteRate" [isSelected]="isSelected(_onsiteRate)" (selected)="selectRate($event.value)">
+            </app-ratebox>
+        </div>
+    </section>
+    <section>
         <p class="title" i18n>Fixed price plans^Forfaits</p>
         <div class="rate-line">
             <app-ratebox [rate]="_simpleWebsite" [isSelected]="isSelected(_simpleWebsite)" (selected)="selectRate($event.value)">
@@ -13,15 +22,6 @@
             <app-ratebox [rate]="_advancedWebsite" [isSelected]="isSelected(_advancedWebsite)" (selected)="selectRate($event.value)">
             </app-ratebox>
             <app-ratebox [rate]="_proWebsite" [isSelected]="isSelected(_proWebsite)" (selected)="selectRate($event.value)">
-            </app-ratebox>
-        </div>
-    </section>
-    <section>
-        <p class="title" i18n>Time and material plans^Plans tarifs journaliers</p>
-        <div class="rate-line">
-            <app-ratebox [rate]="_remotingRate" [isSelected]="isSelected(_remotingRate)" (selected)="selectRate($event.value)">
-            </app-ratebox>
-            <app-ratebox [rate]="_onsiteRate" [isSelected]="isSelected(_onsiteRate)" (selected)="selectRate($event.value)">
             </app-ratebox>
         </div>
     </section>

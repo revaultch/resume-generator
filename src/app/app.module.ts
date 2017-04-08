@@ -33,6 +33,8 @@ import { i18nDirective } from './common/directives/i18n.directive';
 import { i18nService } from './common/directives/i18n.service';
 
 import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
+import { EmailCaptureComponent } from './common/email-capture/email-capture.component';
+import {FormSpreeService} from './common/services/formspree/form-spree.service';
 
 
 @NgModule({
@@ -59,7 +61,8 @@ import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
     KnobComponent,
     RateBoxComponent,
     LoadedDirective,
-    i18nDirective
+    i18nDirective,
+    EmailCaptureComponent
   ],
   entryComponents: [], // used for dynamically allocated components
   imports: [
@@ -68,7 +71,7 @@ import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [DataService, SkillsService, HistoryService, WindowRef, WorkflowEventService, i18nService],
+  providers: [DataService, SkillsService, HistoryService, WindowRef, WorkflowEventService, i18nService, FormSpreeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
