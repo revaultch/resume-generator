@@ -3,8 +3,8 @@
 <div class="popup" *ngIf="_open">
   <div class="header">
     <div class="title" i18n>Ready for action?^Prêt pour l'action ?</div>
-    <div class="subtitle" i18n>Subscribe to my newsletter and get tons of FREE advice!^Souscrivez à ma newsletter et recevez des tas de conseils utiles
-      et GRATUITS !</div>
+    <div class="subtitle" i18n>Subscribe to my newsletter and win^Souscrivez à ma newsletter et gagnez</div>
+    <div class="subtitle2" i18n>1 HOUR OF FREE CONSULTING!^1 HEURE DE CONSULTING GRATUIT !</div>
   </div>
   <div class="action">
     <input type="text" placeholder="email" [(ngModel)]="_email" [ngClass]="{'invalid' :  _invalidEmail}"><button (click)="submitEmail()"

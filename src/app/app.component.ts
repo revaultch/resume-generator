@@ -14,4 +14,5 @@ export class AppComponent {
   selectPlan(event: any) {
     this._selectedPlan = event.value;
   }
+
 }

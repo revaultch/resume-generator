@@ -36,8 +36,14 @@
             font-weight: bold;
         }
         > .subtitle {
-            padding : 40px;
+            padding : 20px;
             font-size : 2.0em;
+        }
+        > .subtitle2 {
+            padding-top : 10px;
+            padding-bottom : 40px;
+            font-size : 2.2em;
+            font-weight: bold;
         }
     }
     > .action {
@@ -89,6 +95,9 @@
         }
         > .subtitle {
             font-size : 1.5em !important;
+        }
+        > .subtitle2 {
+            font-size : 1.6em !important;
         }
     }
 
