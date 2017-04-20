@@ -17,6 +17,17 @@ div {
             font-family:$lato-font ;
             font-weight: 400;
 
+            &.description {
+                width:100% !important;
+                > ul {
+                    > li {
+                        display : block !important;
+                        text-align: justify !important;
+                        padding-bottom : 10px !important;
+                    }
+                }
+            }
+
             h2 {
                 font-size: 1.05em;
                 color : $red-dingue;
@@ -32,15 +43,16 @@ div {
                 &.skills {
                     color : $light-blue;
                     font-size : 1.2em;
+                    > li {
+                        display: inline;
+                        font-weight: 300;
+                        &.odd {
+                            font-weight: 700 !important;
+                        }
+                    }
+                    
                 }
 
-                li {
-                    display: inline !important;
-                    font-weight: 400 !important;
-                    &.odd {
-                        font-weight: 100 !important;
-                    }
-                }
             }
         }
     }
@@ -50,6 +62,8 @@ div {
       div {
           div {
               padding-bottom : 10px;
+              padding-left : 20px;
+              padding-right : 20px;
               div {
                   h2 {
                       font-size : 0.9em;
@@ -73,18 +87,20 @@ div {
       div {
           div {
                 padding-bottom : 5px;
+                padding-left : 10px;
+                padding-right : 10px;
               div {
                   h2 {
-                      font-size : 0.6em;
+                      font-size : 0.8em;
                   }
                   div {
-                      font-size : 0.5em;
+                      font-size : 0.7em;
                   }
                   ul {
-                      font-size : 0.5em;
+                      font-size : 0.7em;
 
                       &.skills {
-                        font-size : 0.4em;
+                        font-size : 0.7em;
                       }
                   }
               }

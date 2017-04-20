@@ -106,14 +106,8 @@
 
  @media screen and (max-width: 800px) {
     .timeline {
-        left : 10% !important;
-    }
-
- }
-
- @media screen and (max-width: 600px) {
-    .timeline {
         display : none !important;
     }
 
  }
+

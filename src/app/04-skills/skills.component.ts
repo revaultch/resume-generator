@@ -64,11 +64,11 @@ export class SkillsComponent implements AfterViewInit, OnInit {
         'dynamicOptions': false
     };
 
-    private linkedInScoreKnobOptions: any = this.options(100, '#2d4052', 50);
+    private linkedInScoreKnobOptions: any = this.options(100, 10, '#2d4052', 50);
 
-    private nbOfProjectsKnobOptions: any = this.options(100, '#3a73bf', 50);
+    private nbOfProjectsKnobOptions: any = this.options(100, 10, '#3a73bf', 50);
 
-    private weeksDoneKnobOptions: any = this.options(100, '#c0392b', 150);
+    private weeksDoneKnobOptions: any = this.options(100, 10, '#c0392b', 150);
 
     private obs = new Subject();
     private obs$ = this.obs.asObservable();
@@ -106,14 +106,17 @@ export class SkillsComponent implements AfterViewInit, OnInit {
     resetKnobs(event: any) {
         let size = window.innerWidth / 10;
         size = size > 100 ? 100 : size;
-        this.linkedInScoreKnobOptions = this.options(size, '#2d4052', 50);
-        this.nbOfProjectsKnobOptions = this.options(size, '#3a73bf', 50);
-        this.weeksDoneKnobOptions = this.options(size, '#c0392b', 150);
+        let trackWidth : number = size / 10;
+        this.linkedInScoreKnobOptions = this.options(size, trackWidth, '#2d4052', 50);
+        this.nbOfProjectsKnobOptions = this.options(size, trackWidth, '#3a73bf', 50);
+        this.weeksDoneKnobOptions = this.options(size, trackWidth, '#c0392b', 150);
     }
 
-    private options(size, color, max) {
+    private options(size, trackWidth, color, max) {
         let result = JSON.parse(JSON.stringify(this.baseKnobOptions));
         result.size = size;
+        result.trackWidth = trackWidth;
+        result.barWidth = trackWidth + 5;
         result.barColor = color;
         result.max = max;
         return result;
@@ -135,6 +138,7 @@ export class SkillsComponent implements AfterViewInit, OnInit {
         this.obs$.debounceTime(500).startWith('').subscribe((click) => {
             this._skillsService.getSkills(this.skillCriteria).subscribe((skills) => {
                 this.skills = skills;
+                this.resetKnobs(null)
             });
         });
 

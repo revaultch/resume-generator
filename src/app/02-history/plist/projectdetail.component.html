@@ -1,21 +1,23 @@
 <div>
     <div>
-        <div>
+        <div class="description">
             <h2>Description</h2>
             <ul>
                 <li *ngFor="let item of project.description; let i = index;">
-                    {{item}}
+                   {{item}}
                 </li>
             </ul>
         </div>
+    </div>
+    <div>
+
         <div>
             <h2>Period</h2>
             <div>
             from {{project.estimatedStart.toLocaleDateString()}} to {{project.estimatedEnd.toLocaleDateString()}}
             </div>
         </div>
-    </div>
-    <div>
+        
         <div>
             <h2>Roles</h2>
             <ul>

@@ -11,7 +11,6 @@
 }
 
 .popup {
-    min-width : 400px !important;
     position : fixed;
     border : 5px orangered solid;
     top : 0px;
@@ -24,11 +23,9 @@
     background-color: white;
     z-index : 101;
     padding : 20px;
-    min-height : 500px ;
+    overflow-y:auto;
     > .header {
         position : relative;
-        width : 100%;
-        height : 30%;
         text-align: center;
         color : orangered;
         > .title {
@@ -48,8 +45,6 @@
     }
     > .action {
         position : relative;
-        width : 100%;
-        height : 50%;
         display:flex;
         flex-direction: row;
         align-content: center;
@@ -58,7 +53,7 @@
             align-self: center;
             padding : 20px;
             font-size: 2.0em;
-            height : 100px;
+            height : 2.5em;
         }
         > input {
             border : 1px solid orange;
@@ -80,9 +75,8 @@
 
     > .naction {
         position : relative;
-        width : 100%;
-        height : 20%;
         text-align: center;
+        padding-top : 40px;
     }
     
 }
@@ -107,22 +101,18 @@
             justify-content: center !important;
             align-content: center !important;
             font-size : 1.5em !important;
-            height : 50px !important;
             padding : 5px !important;
         }
     }
 }
 
-@media screen and (max-width: 700px) {
-
+@media screen and (max-width: 600px) {
     .action {
-        display:block !important;
-        text-align: center !important;
         input, button {
-            font-size : 1.2em !important;
-            height : 50px !important;
-            margin : 20px !important;
+            font-size : 0.8em !important;
+            padding : 5px !important;
         }
     }
 
 }
+
