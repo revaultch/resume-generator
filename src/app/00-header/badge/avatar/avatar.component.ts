@@ -8,7 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AvatarComponent {
     private imgCenter: string = 'assets/images/avatar/a_0_128.png';
-
-    private img = this.imgCenter;
-
+    img = this.imgCenter;
 }

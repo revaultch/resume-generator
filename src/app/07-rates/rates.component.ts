@@ -1,3 +1,4 @@
+import { i18nService } from '../common/directives/i18n.service';
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Rate, Period } from './ratebox/rate.model';
 
@@ -12,16 +13,18 @@ export class RatesComponent implements OnInit {
 
     private _selectedRateplan: Rate;
 
-    private _remotingRate;
+    _remotingRate;
 
-    private _onsiteRate;
+    _onsiteRate;
 
-    private _simpleWebsite;
+    _simpleWebsite;
 
-    private _advancedWebsite;
+    _advancedWebsite;
 
-    private _proWebsite;
+    _proWebsite;
 
+
+    constructor(private _i18nService: i18nService) {}
 
 
     private _remotingRate_en = new Rate('remoting', 480, Period.DAY, 'Good if you need a full-stack developer but you are on the budget', [
@@ -103,7 +106,7 @@ export class RatesComponent implements OnInit {
 
 
     ngOnInit() {
-        if (navigator.language === 'fr') {
+        if (this._i18nService.getLanguage() === 'fr') {
             this._remotingRate = this._remotingRate_fr;
             this._onsiteRate = this._onsiteRate_fr;
             this._simpleWebsite = this._simpleWebsite_fr;

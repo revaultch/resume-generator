@@ -1,3 +1,4 @@
+import { i18nService } from '../common/directives/i18n.service';
 import { SkillCriteria, Skill } from './skills.model';
 import { Observable, Subject } from 'rxjs/Rx';
 import { Component, AfterViewInit, Inject, OnInit } from '@angular/core';
@@ -12,12 +13,12 @@ import { SkilllistComponent } from './skilllist/skilllist.component';
 })
 export class SkillsComponent implements AfterViewInit, OnInit {
 
-    private skillCriteria: SkillCriteria = new SkillCriteria();
+    skillCriteria: SkillCriteria = new SkillCriteria();
 
-    private skills: Array<Skill> = new Array<Skill>();
+    skills: Array<Skill> = new Array<Skill>();
 
 
-    private _presets: Array<any>;
+    _presets: Array<any>;
 
     private _presets_en: Array<any> = [
         { id: -1, name: 'Select a preset' },
@@ -31,7 +32,7 @@ export class SkillsComponent implements AfterViewInit, OnInit {
         { id: 2, name: 'Plus utilisés dans des projets' },
         { id: 3, name: 'Plus de temps passé'}];
 
-    private _selectedPreset: any;
+    _selectedPreset: any;
 
     private baseKnobOptions = {
         'skin': {
@@ -64,11 +65,11 @@ export class SkillsComponent implements AfterViewInit, OnInit {
         'dynamicOptions': false
     };
 
-    private linkedInScoreKnobOptions: any = this.options(100, 10, '#2d4052', 50);
+    linkedInScoreKnobOptions: any = this.options(100, 10, '#2d4052', 50);
 
-    private nbOfProjectsKnobOptions: any = this.options(100, 10, '#3a73bf', 50);
+    nbOfProjectsKnobOptions: any = this.options(100, 10, '#3a73bf', 50);
 
-    private weeksDoneKnobOptions: any = this.options(100, 10, '#c0392b', 150);
+    weeksDoneKnobOptions: any = this.options(100, 10, '#c0392b', 150);
 
     private obs = new Subject();
     private obs$ = this.obs.asObservable();
@@ -77,6 +78,7 @@ export class SkillsComponent implements AfterViewInit, OnInit {
         'name': 'cluster',
         'children': []
     };
+
 
 
     valueChange(event: any) {
@@ -123,10 +125,10 @@ export class SkillsComponent implements AfterViewInit, OnInit {
     }
 
 
-    constructor( @Inject(SkillsService) private _skillsService: SkillsService) { }
+    constructor( @Inject(SkillsService) private _skillsService: SkillsService, private _i18nService: i18nService) { }
 
     ngOnInit() {
-        if (navigator.language == 'fr') {
+        if (this._i18nService.getLanguage() == 'fr') {
             this._presets = this._presets_fr;
         } else {
             this._presets = this._presets_en;

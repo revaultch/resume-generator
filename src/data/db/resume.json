@@ -1221,7 +1221,40 @@
                                 ]
                             },
                             "duration": "4m"
-                        }
+                        },
+                        {
+                            "name": "Work in progress",
+                            "start": {
+                                "year": "2017",
+                                "month": "1"
+                            },
+                            "company": "revault.ch",
+                            "description": [
+                                "Development of ragency.ch framework",
+                                "Development of a self-service website creator for ragency.ch",
+                                "Development of an Android mobile application for on-site industrial issue tracking for a global industrial automation actor"
+                            ],
+                            "roles": [
+                                "Developer"
+                            ],
+                            "skills": {
+                                "technical": [
+                                    "Java",
+                                    "Spring",
+                                    "Angular",
+                                    "PHP",
+                                    "Android",
+                                    "Pixelmator",
+                                    "Maven",
+                                    "Git",
+                                    "JUnit"
+                                ],
+                                "business": [
+                                    "SEO", "Web Development"
+                                ]
+                            },
+                            "duration": "6m"
+                        }                        
                     ]
                 }
             ]

@@ -1,4 +1,3 @@
-import { InvalidPipeArgumentError } from '@angular/common/src/pipes/invalid_pipe_argument_error';
 import { WorkflowEvent } from './workflowevent.model';
 import { WindowRef } from '../window/windowref.service';
 import { Injectable, Inject, EventEmitter } from '@angular/core';

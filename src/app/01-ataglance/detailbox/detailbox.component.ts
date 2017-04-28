@@ -17,7 +17,7 @@ export class DetailBoxComponent implements AfterViewInit, WorkflowEventReceiver 
   @ViewChild('detailbox', { read: ViewContainerRef })
   private _detailBox: any;
 
-  private _isInViewport = false;
+  _isInViewport = false;
 
   constructor(
     @Inject(WorkflowEventService) private _workflowEventService) { }

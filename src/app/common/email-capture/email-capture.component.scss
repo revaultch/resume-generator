@@ -12,6 +12,8 @@
 
 .popup {
     position : fixed;
+    display : flex;
+    flex-direction : column;
     border : 5px orangered solid;
     top : 0px;
     left : 0px;
@@ -76,7 +78,11 @@
     > .naction {
         position : relative;
         text-align: center;
-        padding-top : 40px;
+        padding-top : 60px;
+        a {
+            text-decoration: underline;
+            cursor : pointer;
+        }
     }
     
 }

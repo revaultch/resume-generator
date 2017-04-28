@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "fs": "0.0.1-security",
+    "jsonpath-plus": "^0.16.0",
     "papaparse": "^4.1.2"
   }
 }

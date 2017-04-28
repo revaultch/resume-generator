@@ -9,7 +9,10 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "data"
+        "data",
+        "fr",
+        "robots.txt",
+        "sitemap.xml"
       ],
       "index": "index.html",
       "main": "main.ts",

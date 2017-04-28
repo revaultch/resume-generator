@@ -1,9 +1,11 @@
+import { ActivatedRoute, RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { PageComponent } from './page.component';
 import { HeaderComponent } from './00-header/header.component';
 import { ContactComponent } from './00-header/contact/contact.component';
 import { BadgeComponent } from './00-header/badge/badge.component';
@@ -32,14 +34,15 @@ import { LoadedDirective } from './common/directives/loaded.directive';
 import { i18nDirective } from './common/directives/i18n.directive';
 import { i18nService } from './common/directives/i18n.service';
 
-import {RateBoxComponent} from './07-rates/ratebox/rate-box.component';
+import { RateBoxComponent } from './07-rates/ratebox/rate-box.component';
 import { EmailCaptureComponent } from './common/email-capture/email-capture.component';
-import {FormSpreeService} from './common/services/formspree/form-spree.service';
+import { FormSpreeService } from './common/services/formspree/form-spree.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PageComponent,
     HeaderComponent,
     BadgeComponent,
     MenuComponent,

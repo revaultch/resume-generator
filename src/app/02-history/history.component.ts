@@ -18,12 +18,12 @@ export class HistoryComponent implements OnInit, AfterViewInit, WorkflowEventRec
     @ViewChild('historyviewer', { read: ViewContainerRef })
     private _historyViewer: any;
 
-    private _start: Date = new Date(1996, 0, 1);
-    private _end: Date = new Date();
-    private _projects: Array<Project> = new Array<Project>();
-    private _selectedProject: Project;
+    _start: Date = new Date(1996, 0, 1);
+    _end: Date = new Date();
+    _projects: Array<Project> = new Array<Project>();
+    _selectedProject: Project;
 
-    private _isInViewport = false;
+    _isInViewport = false;
 
 
     constructor( @Inject(HistoryService) private _historyService: HistoryService,

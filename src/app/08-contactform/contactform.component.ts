@@ -14,11 +14,11 @@ export class ContactFormComponent implements OnInit {
 
   @Input() selectedPlan: string;
 
-  private data: FormGroup;
+  data: FormGroup;
 
-  private _submitFailed = false;
+  _submitFailed = false;
 
-  private _formSent = false;
+  _formSent = false;
 
   constructor( @Inject(FormSpreeService) private _formSpreeService, private _http: Http, private _fb: FormBuilder) { }
 

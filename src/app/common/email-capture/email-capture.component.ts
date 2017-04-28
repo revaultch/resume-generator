@@ -1,4 +1,4 @@
-import { TimerObservable } from '@angular/cli/node_modules/rxjs/observable/TimerObservable';
+import { Observable } from 'rxjs/Rx';
 
 import { WindowRef } from '../window/windowref.service';
 import { FormSpreeService } from '../services/formspree/form-spree.service';
@@ -34,7 +34,7 @@ export class EmailCaptureComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     const delay = 15000; // 15 seconds
-    TimerObservable.create(delay).subscribe((item) => {
+    Observable.timer(delay).subscribe((item) => {
       this.openPopup();
     });
   }
