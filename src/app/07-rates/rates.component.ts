@@ -27,14 +27,14 @@ export class RatesComponent implements OnInit {
     constructor(private _i18nService: i18nService) {}
 
 
-    private _remotingRate_en = new Rate('remoting', 480, Period.DAY, 'Good if you need a full-stack developer but you are on the budget', [
+    private _remotingRate_en = new Rate('remoting', 580, Period.DAY, 'Good if you need a full-stack developer but you are on the budget', [
         'World class Java / Angular2 full-stack development',
         'Daily online progress reporting',
         'Weekly on-site reporting'
     ]);
 
 
-    private _onsiteRate_en = new Rate('on-site', 680, Period.DAY, 'Perfect in case you need some help on an existing project', [
+    private _onsiteRate_en = new Rate('on-site', 780, Period.DAY, 'Perfect in case you need some help on an existing project', [
         'World class Java / Angular2 full-stack development',
         'On-Site full / partial time',
         'Benefit from my project mgmt / agile skills'
@@ -68,14 +68,14 @@ export class RatesComponent implements OnInit {
     /////// FR //////
 
 
-    private _remotingRate_fr = new Rate('à distance', 480, Period.DAY, 'Bon si vous avez besoin d\'un développeur complet, mais vous êtes limité par le budget', [
+    private _remotingRate_fr = new Rate('à distance', 580, Period.DAY, 'Bon si vous avez besoin d\'un développeur complet, mais vous êtes limité par le budget', [
         'Développement Java / Angular2 de classe mondiale !',
         'Rapports d\'activité quotidiens en ligne',
         'Rapports hebdomadaires sur site'
     ]);
 
 
-    private _onsiteRate_fr = new Rate('sur site', 680, Period.DAY, 'Parfait si vous avez besoin d\'aide sur un projet existant', [
+    private _onsiteRate_fr = new Rate('sur site', 780, Period.DAY, 'Parfait si vous avez besoin d\'aide sur un projet existant', [
         'Développement Java / Angular2 de classe mondiale !',
         'Temps plein / partiel sur place',
         'Profitez de mes compétences en gestion de projet / agilité'

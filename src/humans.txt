@@ -1,0 +1,18 @@
+/* TEAM */
+
+Author:              Borja Fernandez
+Contact:             borja@revault.ch
+Website:             http://borja.revault.ch
+Twitter:             @BorjaEFernandez
+Location:            Geneva, Switzerland
+
+
+
+/* SITE */
+
+Language:            English
+Standards:           HTML5, CSS3
+Components:          jQuery, SASS, JS, Angular
+Tools:               Gulp, Yarn, bower, angular-cli
+IDE:                 Visual Code
+Built on:            Mac OS X, Windows 10
