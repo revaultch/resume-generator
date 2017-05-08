@@ -7,13 +7,10 @@ import * as easing from 'jquery.easing';
   templateUrl: './badge.component.html',
   styleUrls: ['./badge.component.scss']
 })
-export class BadgeComponent implements AfterViewInit {
+export class BadgeComponent {
 
   @ViewChild('badge', { read: ViewContainerRef })
   private _badge: any;
-
-  ngAfterViewInit() {
-  }
 
   @HostListener('window:load')
   onLoad() {
@@ -22,7 +19,7 @@ export class BadgeComponent implements AfterViewInit {
       .animate(
       { top: 0 },
       {
-        duration: 'slow',
+        duration: 1000,
         easing: 'easeOutElastic'
       });
   }

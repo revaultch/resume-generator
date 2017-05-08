@@ -33,7 +33,7 @@ export class EmailCaptureComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit() {
-    const delay = 25000; // 25 seconds
+    const delay = 5000; // 25 seconds
     Observable.timer(delay).subscribe((item) => {
       this.openPopup();
     });
