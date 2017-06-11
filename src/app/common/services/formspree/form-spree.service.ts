@@ -10,7 +10,7 @@ export class FormSpreeService {
   constructor(@Inject(Http) private _http: Http) {}
 
   submitContactForm(body : any) : Observable<any> {
-    return this.submitAny(body);
+    return this.submitAny({body : body});
   }
 
   submitEmail(email : string) : Observable<any> {

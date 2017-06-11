@@ -35,20 +35,9 @@ export class ContactFormComponent implements OnInit {
   onSubmit({ value, valid }: { value: any, valid: boolean }) {
 
     value.ratePlan = this.selectedPlan;
-    let bodyString = JSON.stringify(value);
-    /*
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
     
-        this._http.post(this.formspreeUrl, bodyString, options)
-          .map((res: Response) => res.json())
-          .subscribe((data) => {
-            this._formSent = true;
-          }, (err) => {
-            this._submitFailed = true;
-          }, () => {
-          });
-    */
+    let bodyString = JSON.stringify(value);
+
     this._formSpreeService.submitContactForm(bodyString).subscribe((data) => {
       this._formSent = true;
     }, (err) => {
