@@ -1,37 +1,63 @@
-<h1 i18n>SKILLS^COMPETENCES</h1>
+<h1 [i18n]>SKILLS^COMPETENCES</h1>
 <section>
-<p i18n>Skills are the tools you need to make your projects come true. By themselves they are just that ... simple tools. Sometimes temptation is too great to make them become the center of our world. But we should never forget that these tools are there for one sole reason : <b>creating value</b>.^Les compétences sont les outils dont vous avez besoin pour réaliser vos projets. En soi, ils sont juste ... de simples outils. Parfois la tentation est trop grande de les faire devenir le centre de notre monde et une fin en soi. Mais nous ne devrions jamais oublier qu'ils sont là juste pour une seule raison: <b> créer de la valeur </b>. </p>
-<p i18n>We should always choose the right tools for the job. With that said it's far from being an easy task but we should never forget that we're also responsible for the tools we choose to use.^Nous devons toujours choisir les bons outils pour le travail. C'est clairement plus facile à dire qu'à faire, mais nous ne devrions jamais oublier que nous sommes également responsables des outils que nous choisissons d'utiliser.</p>
-<p i18n>With that in mind, here's another component that uses the same datasource as before to list my skills given some criteria. (note that the results are limited to 20 rows)^Dans cet esprit, voici un autre composant qui utilise la même source de données que précédemment. Son but est d'énumérer mes compétences. (Notez que les résultats sont limités à 20 lignes)</p>
+    <p [i18n]>Skills are the tools you need to make your projects come true. By themselves they are just that ... simple
+        tools. Sometimes temptation is too great to make them become the center of our world. But we should never forget
+        that these tools are there for one sole reason : <b>creating value</b>.^Les compétences sont les outils dont
+        vous avez besoin pour réaliser vos projets. En soi, ils sont juste ... de simples outils. Parfois la tentation
+        est trop grande de les faire devenir le centre de notre monde et une fin en soi. Mais nous ne devrions jamais
+        oublier qu'ils sont là juste pour une seule raison: <b> créer de la valeur </b>. </p>
+    <p [i18n]>We should always choose the right tools for the job. With that said it's far from being an easy task but
+        we should never forget that we're also responsible for the tools we choose to use.^Nous devons toujours choisir
+        les bons outils pour le travail. C'est clairement plus facile à dire qu'à faire, mais nous ne devrions jamais
+        oublier que nous sommes également responsables des outils que nous choisissons d'utiliser.</p>
+    <p [i18n]>With that in mind, here's another component that uses the same datasource as before to list my skills
+        given some criteria. (note that the results are limited to 20 rows)^Dans cet esprit, voici un autre composant
+        qui utilise la même source de données que précédemment. Son but est d'énumérer mes compétences. (Notez que les
+        résultats sont limités à 20 lignes)</p>
 </section>
 <div class="skillviewer" (window:resize)="resetKnobs($event)">
     <div class="presets">
         <span></span>
         <select (change)="presetSelected($event)" [(ngModel)]="_selectedPreset" placeholder="Select a preset">
-            <option *ngFor="let item of _presets" disabled="{{item.id == -1 ? 'disabled' : ''}}" [ngValue]="item">{{item.name}}</option>
+            <option *ngFor="let item of _presets" disabled="{{item.id == -1 ? 'disabled' : ''}}" [ngValue]="item">
+                {{item.name}}</option>
         </select>
     </div>
     <div class="controls">
         <span>&nbsp;</span>
         <div class="knob">
-            <ui-knob [(value)]="skillCriteria.weeksDone" [options]="weeksDoneKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
-            <span i18n>total weeks spent^semaines passées</span>
+            <ui-knob [(value)]="skillCriteria.weeksDone" [options]="weeksDoneKnobOptions"
+                (valueChange)="valueChange($event)"></ui-knob>
+            <span [i18n]>total weeks spent^semaines passées</span>
         </div>
         <div class="knob">
-            <ui-knob [(value)]="skillCriteria.nbOfProjects" [options]="nbOfProjectsKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
-            <span i18n>projects^projets</span>
+            <ui-knob [(value)]="skillCriteria.nbOfProjects" [options]="nbOfProjectsKnobOptions"
+                (valueChange)="valueChange($event)"></ui-knob>
+            <span [i18n]>projects^projets</span>
         </div>
         <div class="knob">
-            <ui-knob [(value)]="skillCriteria.linkedInScore" [options]="linkedInScoreKnobOptions" (valueChange)="valueChange($event)"></ui-knob>
+            <ui-knob [(value)]="skillCriteria.linkedInScore" [options]="linkedInScoreKnobOptions"
+                (valueChange)="valueChange($event)"></ui-knob>
             <span>linkedIn score</span>
         </div>
-        <span><div i18n>last used^dernière utilisation</div></span>
+        <span>
+            <div [i18n]>last used^dernière utilisation</div>
+        </span>
     </div>
     <app-skilllist [skills]="skills"></app-skilllist>
 </div>
 <section>
-<p i18n>As you can see Java leads the parade! There's a good reason for that. This language has been around for a while and combined with Spring framework it is still today highly relevant. There's also a relatively high demand nowadays (early 2017) especially in the banking industry.^Comme vous pouvez le voir, Java mène le bal! Il y a une bonne raison pour cela. Ce langage est là depuis un bon moment et combiné avec Spring framework, il est encore aujourd'hui très pertinent. Il existe encore de nos jours une demande relativement élevée (début 2017), en particulier dans le secteur bancaire. </p>
-<p i18n>However, I've been working a lot with front-end technologies for the past 5 years, first with plain old JavaScript and HTML, then came JQuery and the power it brought to the masses and then things became a lot more serious with NodeJS, Angular, React and TypeScript. I think there's a massive revolution going on and that these new JS stacks are here to stay !^Cependant, j'ai beaucoup travaillé avec des technologies front-end les 5 dernières années, d'abord avec ces bons vieux Javascript et HTML, puis avec JQuery. Ensuite les choses sont devenues bien plus sérieuses avec NodeJS, Angular, React et TypeScript. Je pense qu'on assiste actuellement à une révolution et que ces nouvelles stacks JS sont là pour un moment!</p>
+    <p [i18n]>As you can see Java leads the parade! There's a good reason for that. This language has been around for a
+        while and combined with Spring framework it is still today highly relevant. There's also a relatively high
+        demand nowadays (early 2017) especially in the banking industry.^Comme vous pouvez le voir, Java mène le bal! Il
+        y a une bonne raison pour cela. Ce langage est là depuis un bon moment et combiné avec Spring framework, il est
+        encore aujourd'hui très pertinent. Il existe encore de nos jours une demande relativement élevée (début 2017),
+        en particulier dans le secteur bancaire. </p>
+    <p [i18n]>However, I've been working a lot with front-end technologies for the past 5 years, first with plain old
+        JavaScript and HTML, then came JQuery and the power it brought to the masses and then things became a lot more
+        serious with NodeJS, Angular, React and TypeScript. I think there's a massive revolution going on and that these
+        new JS stacks are here to stay !^Cependant, j'ai beaucoup travaillé avec des technologies front-end les 5
+        dernières années, d'abord avec ces bons vieux Javascript et HTML, puis avec JQuery. Ensuite les choses sont
+        devenues bien plus sérieuses avec NodeJS, Angular, React et TypeScript. Je pense qu'on assiste actuellement à
+        une révolution et que ces nouvelles stacks JS sont là pour un moment!</p>
 </section>
-
-

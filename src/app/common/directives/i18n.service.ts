@@ -6,7 +6,7 @@ const EN = "en";
 @Injectable()
 export class i18nService {
 
- 
+
     private _location;
     private _navigatorLanguage;
 
@@ -21,16 +21,16 @@ export class i18nService {
     // TODO !!!!
     // en : first -- fr : second
     public translate(str: string) {
-            let data = str.split('^');
-            if (this.getLanguage() == FR)  {
-                return data[1];
-            } else {
-                return data[0];
-            }
+        let data = str.split('^');
+        if (this.getLanguage() == FR) {
+            return data[1];
+        } else {
+            return data[0];
+        }
 
     }
 
-    public getLanguage() : string {
+    public getLanguage(): string {
         if (this._location) {
             if (this._location.indexOf("/" + FR) != -1) {
                 return FR;

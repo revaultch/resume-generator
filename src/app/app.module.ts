@@ -31,7 +31,7 @@ import { DataService } from './common/data.service';
 import { WindowRef } from './common/window/windowref.service';
 import { WorkflowEventService } from './common/workflow/workflowevent.service';
 import { LoadedDirective } from './common/directives/loaded.directive';
-import { i18nDirective } from './common/directives/i18n.directive';
+import { I18nDirective } from './common/directives/i18n.directive';
 import { i18nService } from './common/directives/i18n.service';
 
 import { RateBoxComponent } from './07-rates/ratebox/rate-box.component';
@@ -64,7 +64,7 @@ import { FormSpreeService } from './common/services/formspree/form-spree.service
     KnobComponent,
     RateBoxComponent,
     LoadedDirective,
-    i18nDirective,
+    I18nDirective,
     EmailCaptureComponent
   ],
   entryComponents: [], // used for dynamically allocated components

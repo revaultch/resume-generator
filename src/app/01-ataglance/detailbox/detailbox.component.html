@@ -1,5 +1,9 @@
 <div class="detailbox" #detailbox>
-    <div class="logo-container" [ngClass]="{'isInViewport' : _isInViewport}"><div class="logo {{logo}}"></div></div>
+    <div class="logo-container" [ngClass]="{'isInViewport' : _isInViewport}">
+        <div class="logo {{logo}}"></div>
+    </div>
     <span class="title">{{title}}</span>
-    <span class="text" i18n><ng-content></ng-content></span>
+    <span class="text" [i18n]>
+        <ng-content></ng-content>
+    </span>
 </div>

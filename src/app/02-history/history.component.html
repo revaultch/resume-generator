@@ -2,15 +2,36 @@
     <div id="lace1">
     </div>
 </div>
-<h1 i18n>HISTORY^HISTORIQUE</h1>
+<h1 [i18n]>HISTORY^HISTORIQUE</h1>
 <section>
-<p i18n>Through the years I have worked on multiple projects and experienced a wide range of technologies. While a new language or a new framework can seem exciting at first it often takes a lot of work to become proficient. But then as time goes by, you realise that the same concepts get recycled every now and then and this is where experience comes into play. I believe that for the most part, experience is about recognizing patterns and concepts and finding the answer to questions by adapting knowledge to a new situation.^Au fil des années, j'ai travaillé sur de multiples projets et j'ai connu un large éventail de technologies. Alors qu'une nouveau language ou un nouveau framework peut sembler stimulant au début, il faut souvent beaucoup de travail pour devenir réellement productif. Mais alors que le temps passe, vous vous rendez compte que bien souvent les mêmes concepts sont recyclés en permanence et c'est là où l'expérience entre en jeu. Je crois que, bien souvent, l'expérience permet de trouver la réponse aux questions en adaptant ses propres connaissances à une nouvelle situation.</p>
-<p i18n>Talking about experience, let's have a look at the following component. This is a list containing most of the projects I've been involved in. The table is sorted in reverse order and a features a timeline to situate selected project in time. I developed this component using <b>Angular2, HTML5, Sass, RxJs</b> ... and many others. Don't hesitate to leave me a message in case you need some more detail.^En parlant d'expérience, nous allons jeter un oeil au composant suivant. Il s'agit d'une liste contenant la plupart des projets dans lesquels j'ai été impliqué. Les projets sont triés du plus récent au plus ancien et un calendrier vous permet de le situer dans le temps. J'ai développé ce composant en utilisant <b> Angular2, HTML5, Sass, RxJs </b> ... et encore d'autres outils. Pour l'instant, le détail n'est disponible qu'en anglais. N'hésitez pas à me laisser un message au cas où vous auriez besoin de plus de détails.</p>
+    <p [i18n]>Through the years I have worked on multiple projects and experienced a wide range of technologies. While a
+        new language or a new framework can seem exciting at first it often takes a lot of work to become proficient.
+        But then as time goes by, you realise that the same concepts get recycled every now and then and this is where
+        experience comes into play. I believe that for the most part, experience is about recognizing patterns and
+        concepts and finding the answer to questions by adapting knowledge to a new situation.^Au fil des années, j'ai
+        travaillé sur de multiples projets et j'ai connu un large éventail de technologies. Alors qu'une nouveau
+        language ou un nouveau framework peut sembler stimulant au début, il faut souvent beaucoup de travail pour
+        devenir réellement productif. Mais alors que le temps passe, vous vous rendez compte que bien souvent les mêmes
+        concepts sont recyclés en permanence et c'est là où l'expérience entre en jeu. Je crois que, bien souvent,
+        l'expérience permet de trouver la réponse aux questions en adaptant ses propres connaissances à une nouvelle
+        situation.</p>
+    <p [i18n]>Talking about experience, let's have a look at the following component. This is a list containing most of
+        the projects I've been involved in. The table is sorted in reverse order and a features a timeline to situate
+        selected project in time. I developed this component using <b>Angular2, HTML5, Sass, RxJs</b> ... and many
+        others. Don't hesitate to leave me a message in case you need some more detail.^En parlant d'expérience, nous
+        allons jeter un oeil au composant suivant. Il s'agit d'une liste contenant la plupart des projets dans lesquels
+        j'ai été impliqué. Les projets sont triés du plus récent au plus ancien et un calendrier vous permet de le
+        situer dans le temps. J'ai développé ce composant en utilisant <b> Angular2, HTML5, Sass, RxJs </b> ... et
+        encore d'autres outils. Pour l'instant, le détail n'est disponible qu'en anglais. N'hésitez pas à me laisser un
+        message au cas où vous auriez besoin de plus de détails.</p>
 </section>
 <app-timeline [start]="_start" [end]="_end" [focus]="_selectedProject" [isInViewport]="_isInViewport"></app-timeline>
 <div id="history-viewer" #historyviewer>
     <app-projectlist [projects]="_projects" (onSelection)="selectProject($event)"></app-projectlist>
 </div>
 <section>
-<p i18n>As you can see the information here is quite dense. I will probably make this part evolve as new ideas arise. Again, don't hesitate to contact me if you have any suggestion !^Comme vous pouvez le voir, l'information ici est assez dense. Je vais probablement faire évoluer cette partie à mesure que de nouvelles idées surgiront. Encore une fois, n'hésitez pas à me contacter si vous avez une suggestion!</p>
+    <p [i18n]>As you can see the information here is quite dense. I will probably make this part evolve as new ideas
+        arise. Again, don't hesitate to contact me if you have any suggestion !^Comme vous pouvez le voir, l'information
+        ici est assez dense. Je vais probablement faire évoluer cette partie à mesure que de nouvelles idées surgiront.
+        Encore une fois, n'hésitez pas à me contacter si vous avez une suggestion!</p>
 </section>

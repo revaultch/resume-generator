@@ -1,24 +1,30 @@
 <h1>CONTACT</h1>
 
 <section>
-<p i18n>Here's my contact form. I hope you enjoyed my website experience.^Voici mon formulaire de contact. J'espère que vous avez apprécié mon CV en ligne.</p>
-<p i18n>If it's the case and you think we can work together do not hesitate to leave me a note, I'll get back to you ASAP.^Si c'est le cas et que vous pensez que nous pourrions travailler ensemble, n'hésitez pas à me laisser un message. Je vous répondrai dès que possible.</p>
+    <p [i18n]>Here's my contact form. I hope you enjoyed my website experience.^Voici mon formulaire de contact.
+        J'espère que vous avez apprécié mon CV en ligne.</p>
+    <p [i18n]>If it's the case and you think we can work together do not hesitate to leave me a note, I'll get back to
+        you ASAP.^Si c'est le cas et que vous pensez que nous pourrions travailler ensemble, n'hésitez pas à me laisser
+        un message. Je vous répondrai dès que possible.</p>
 </section>
 
 <form novalidate name="contact-form" [formGroup]="data" (ngSubmit)="onSubmit(data)">
-    <input [ngClass]="{'error' : !data.controls.name.valid}" type="text" [i18n]="{'placeholder' : 'Name^Nom'}" formControlName="name">
-    <input [ngClass]="{'error' : !data.controls.company.valid}" type="text" [i18n]="{'placeholder' : 'Company^Société'}" formControlName="company" >
+    <input [ngClass]="{'error' : !data.controls.name.valid}" type="text" [i18n]="{'placeholder' : 'Name^Nom'}"
+        formControlName="name">
+    <input [ngClass]="{'error' : !data.controls.company.valid}" type="text" [i18n]="{'placeholder' : 'Company^Société'}"
+        formControlName="company">
     <input [ngClass]="{'error' : !data.controls.email.valid}" type="text" placeholder="email" formControlName="email">
-    <textarea [ngClass]="{'error' : !data.controls.message.valid}" [i18n]="{'placeholder' : 'Dear Sir...^Cher Monsieur ...'}" formControlName="message"></textarea>
-    <div class="message-sent" *ngIf="_formSent" i18n> 
+    <textarea [ngClass]="{'error' : !data.controls.message.valid}"
+        [i18n]="{'placeholder' : 'Dear Sir...^Cher Monsieur ...'}" formControlName="message"></textarea>
+    <div class="message-sent" *ngIf="_formSent" [i18n]>
         Message was sent ! Thank you for your time.^Le message a été envoyé ! Merci pour votre temps.
     </div>
 
-    <div class="send-error" *ngIf="_submitFailed" i18n>
-        Sorry, something went wrong while sending form. Please try again.^Désolé, un problème est apparu en envoyant les données du formulaire. Merci de réessayer.
+    <div class="send-error" *ngIf="_submitFailed" [i18n]>
+        Sorry, something went wrong while sending form. Please try again.^Désolé, un problème est apparu en envoyant les
+        données du formulaire. Merci de réessayer.
     </div>
 
-    <input [hidden]="_formSent" type="submit" [disabled]="data.invalid" [i18n]="{'value' : 'Send message^Envoyer message'}">
+    <input [hidden]="_formSent" type="submit" [disabled]="data.invalid"
+        [i18n]="{'value' : 'Send message^Envoyer message'}">
 </form>
-
-

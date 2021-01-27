@@ -1,5 +1,8 @@
 <div class="timeline" [ngClass]="{'inViewport' : isInViewport}">
     <div class="focus" [ngStyle]="{'top' : (100 - _focusEnd) + '%', 'height' : _focusLength + '%'}">
     </div>
-    <div class="yearmark" *ngFor="let year of _years" [ngClass]="{'terminal' : isTerminal(year)}" [ngStyle]="{'top' : (100 - year.position) + '%'}" ><span>{{year.value}}</span><div></div></div>
+    <div class="yearmark" *ngFor="let year of _years" [ngClass]="{'terminal' : isTerminal(year)}"
+        [ngStyle]="{'top' : (100 - year.position) + '%'}"><span>{{year.value}}</span>
+        <div></div>
+    </div>
 </div>

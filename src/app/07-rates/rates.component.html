@@ -1,30 +1,42 @@
-<h1 i18n>RATES^TARIFS</h1>
+<h1 [i18n]>RATES^TARIFS</h1>
 <section>
-    <p i18n>Here is a price list based on some classic cases. Please note that the following are generic / best-case scenarios. For additional information, if you have some more specific input please contact me.^Le but de la liste de prix ci-dessous est de vous donner une idée des tarifs pratiqués. Je donne quelques exemples de scénarios mais la liste ne couvre pas toutes mes prestations. Pour plus d'informations, si vous avez un besoin spécifique, veuillez me contacter.</p>
-    <p i18n>Also keep in mind that these time and material plans apply only for projects > than 20 man days.^Merci de noter également que les tarifs journaliers ci-dessous ne s'appliquent en principe que pour une durée minimale de 20 jours.</p>
-    <p i18n>Other restrictions may apply given the type of project / environment.^D'autres restrictions pourraient s'appliquer en fonction du type de projet ou environnement.</p>
+    <p [i18n]>Here is a price list based on some classic cases. Please note that the following are generic / best-case
+        scenarios. For additional information, if you have some more specific input please contact me.^Le but de la
+        liste de prix ci-dessous est de vous donner une idée des tarifs pratiqués. Je donne quelques exemples de
+        scénarios mais la liste ne couvre pas toutes mes prestations. Pour plus d'informations, si vous avez un besoin
+        spécifique, veuillez me contacter.</p>
+    <p [i18n]>Also keep in mind that these time and material plans apply only for projects > than 20 man days.^Merci de
+        noter également que les tarifs journaliers ci-dessous ne s'appliquent en principe que pour une durée minimale de
+        20 jours.</p>
+    <p [i18n]>Other restrictions may apply given the type of project / environment.^D'autres restrictions pourraient
+        s'appliquer en fonction du type de projet ou environnement.</p>
 </section>
 <div id="rates">
     <section>
-        <p class="title" i18n>Time and material plans^Plans tarifs journaliers</p>
+        <p class="title" [i18n]>Time and material plans^Plans tarifs journaliers</p>
         <div class="rate-line">
-            <app-ratebox [rate]="_remotingRate" [isSelected]="isSelected(_remotingRate)" (selected)="selectRate($event.value)">
+            <app-ratebox [rate]="_remotingRate" [isSelected]="isSelected(_remotingRate)"
+                (selected)="selectRate($event.value)">
             </app-ratebox>
-            <app-ratebox [rate]="_onsiteRate" [isSelected]="isSelected(_onsiteRate)" (selected)="selectRate($event.value)">
+            <app-ratebox [rate]="_onsiteRate" [isSelected]="isSelected(_onsiteRate)"
+                (selected)="selectRate($event.value)">
             </app-ratebox>
         </div>
     </section>
     <section>
-        <p class="title" i18n>Fixed price plans^Forfaits</p>
+        <p class="title" [i18n]>Fixed price plans^Forfaits</p>
         <div class="rate-line">
-            <app-ratebox [rate]="_simpleWebsite" [isSelected]="isSelected(_simpleWebsite)" (selected)="selectRate($event.value)">
+            <app-ratebox [rate]="_simpleWebsite" [isSelected]="isSelected(_simpleWebsite)"
+                (selected)="selectRate($event.value)">
             </app-ratebox>
-            <app-ratebox [rate]="_advancedWebsite" [isSelected]="isSelected(_advancedWebsite)" (selected)="selectRate($event.value)">
+            <app-ratebox [rate]="_advancedWebsite" [isSelected]="isSelected(_advancedWebsite)"
+                (selected)="selectRate($event.value)">
             </app-ratebox>
-            <app-ratebox [rate]="_proWebsite" [isSelected]="isSelected(_proWebsite)" (selected)="selectRate($event.value)">
+            <app-ratebox [rate]="_proWebsite" [isSelected]="isSelected(_proWebsite)"
+                (selected)="selectRate($event.value)">
             </app-ratebox>
         </div>
     </section>
 </div>
-<p i18n>Contact me for daily rates.^Merci de me contacter pour les tarifs journaliers.</p>
-<p i18n>Please note that above prices are all pre-tax.^Veuillez noter que les prix ci-dessus sont hors taxes.</p>
+<p [i18n]>Contact me for daily rates.^Merci de me contacter pour les tarifs journaliers.</p>
+<p [i18n]>Please note that above prices are all pre-tax.^Veuillez noter que les prix ci-dessus sont hors taxes.</p>

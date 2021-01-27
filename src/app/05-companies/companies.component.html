@@ -1,22 +1,29 @@
-<h1 i18n>COMPANIES^SOCIETES</h1>
+<h1 [i18n]>COMPANIES^SOCIETES</h1>
 
 <section>
-<p i18n>These are some of the companies I've worked for so far. As you can see they cover a pretty good range of industries.^Voici quelques unes des sociétés pour lesquelles j'ai travaillé. Comme vous pouvez le voir, ils couvrent une assez large gamme de secteurs. </p>
-<p i18n>The fact is I spent most of my career working for banks. But I also have notable experience in other fields :^Le fait est que j'ai passé le plus gros de ma carrière à travailler pour la banque. Mais j'ai aussi une expérience notable dans d'autres domaines</p>
-<ul>
-    <li><b>Banking / Fund Management</b> (LODH &amp; Cie, Pictet &amp; Cie, Capital Group)</li>
-    <li><b>FinTech / Payment</b> (iKentoo, Zong) </li>
-    <li><b>Telco</b> (Orange, Adeya) </li>
-    <li><b>Insurance</b> (TCS)</li>
-    <li><b>Consulting</b> (Cross, revault)</li>
-    <li><b>NGOs</b> (ILO)</li>
-</ul>
+    <p [i18n]>These are some of the companies I've worked for so far. As you can see they cover a pretty good range of
+        industries.^Voici quelques unes des sociétés pour lesquelles j'ai travaillé. Comme vous pouvez le voir, ils
+        couvrent une assez large gamme de secteurs. </p>
+    <p [i18n]>The fact is I spent most of my career working for banks. But I also have notable experience in other
+        fields :^Le fait est que j'ai passé le plus gros de ma carrière à travailler pour la banque. Mais j'ai aussi une
+        expérience notable dans d'autres domaines</p>
+    <ul>
+        <li><b>Banking / Fund Management</b> (LODH &amp; Cie, Pictet &amp; Cie, Capital Group)</li>
+        <li><b>FinTech / Payment</b> (iKentoo, Zong) </li>
+        <li><b>Telco</b> (Orange, Adeya) </li>
+        <li><b>Insurance</b> (TCS)</li>
+        <li><b>Consulting</b> (Cross, revault)</li>
+        <li><b>NGOs</b> (ILO)</li>
+    </ul>
 </section>
 <div class="marqueecontainer">
     <div class="logopanel" #logoPanel>
-        <app-companylogo [name]="name" [highlight]="_highlightIndex[i]" *ngFor="let name of names; let i= index"></app-companylogo>
+        <app-companylogo [name]="name" [highlight]="_highlightIndex[i]" *ngFor="let name of names; let i= index">
+        </app-companylogo>
     </div>
 </div>
 <section>
-<p i18n>In case of any doubt, do not hesitate to request me for references. I'll be happy to provide you with any required information.^En case de doute, n'hésitez pas à me demander des références. Je serais ravi de vous fournir toute information utile.</p>
+    <p [i18n]>In case of any doubt, do not hesitate to request me for references. I'll be happy to provide you with any
+        required information.^En case de doute, n'hésitez pas à me demander des références. Je serais ravi de vous
+        fournir toute information utile.</p>
 </section>

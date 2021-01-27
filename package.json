@@ -23,18 +23,16 @@
     "@angular/platform-browser-dynamic": "^4.0.3",
     "@angular/platform-server": "^4.0.3",
     "@angular/router": "^4.0.3",
-    "@nglibs/meta": "^0.4.0-rc.1",
     "core-js": "^2.4.1",
     "d3": "^3.4.6",
     "jquery": "^3.1.1",
     "jquery.easing": "^1.4.1",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
-    "typescript": "^2.2.2",
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.0-rc.0",
+    "@angular/cli": "^1.0.0",
     "@angular/compiler-cli": "^2.3.1",
     "@types/d3": "^4.4.0",
     "@types/jasmine": "2.5.38",
@@ -50,6 +48,6 @@
     "protractor": "~4.0.13",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
-    "typescript": "~2.1.6"
+    "typescript": "^2.3.4"
   }
 }
